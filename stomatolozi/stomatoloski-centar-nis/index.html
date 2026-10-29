@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
 <title>Stomatološki centar Niš, Niš</title>
-<meta name="description" content="Specijalistička zdravstvena ustanova u Nišu. Individualni plan lečenja i sve vrste stomatoloških intervencija, uz CBCT snimanje u istom centru.">
+<meta name="description" content="Specijalistička zdravstvena ustanova, osnovana da pruži siguran, predvidiv i najbolji mogući tretman u najkraćem roku. Individualni plan lečenja i CBCT snimanje u istom centru.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
@@ -45,7 +45,38 @@ h2{font-size:clamp(28px,3.2vw,44px)}
 .duo-h{flex:1 1 260px;display:flex;flex-direction:column;gap:14px}
 .duo-b{flex:2 1 520px;min-width:0}
 .duo-b:empty{display:none}
+.sp-split{display:flex;flex-wrap:wrap;gap:32px 64px;align-items:center}
+.sp-split .sp-img{flex:1 1 420px;min-width:0;width:100%;aspect-ratio:4/3;max-height:440px;object-fit:cover;border-radius:var(--r-img,6px)}
+.sp-text{flex:1 1 380px;display:flex;flex-direction:column;gap:18px}
+.sp-text .plist{grid-template-columns:1fr}
 .duo-img .sp-img{flex:1 1 100%;width:100%;max-height:440px;object-fit:cover;border-radius:var(--r-img,6px)}
+.sec-top{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:12px 64px;margin-bottom:32px}
+.sec-top .note{max-width:52ch}
+.ic{display:inline-flex;align-items:center;justify-content:center;flex:none}
+.ic svg{width:24px;height:24px}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:16px}
+.card{display:flex;flex-direction:column;gap:10px;margin:0}
+.card h3{font-size:19px;line-height:1.25;letter-spacing:-.01em}
+.card p{margin:0;color:var(--muted);font-size:15px;line-height:1.55}
+.card-img{padding:0!important;overflow:hidden;grid-column:span 2;grid-row:span 2;order:-1}.card-img img{width:100%;height:100%;min-height:220px;object-fit:cover}
+.facts{margin:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:24px}
+.facts div{display:flex;flex-direction:column;gap:4px}
+.facts dt{font-family:var(--fd);font-size:clamp(34px,3.6vw,52px);line-height:1;letter-spacing:-.03em}
+.facts dd{margin:0;color:var(--muted);font-size:15px}
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px;counter-reset:st}
+.steps li{display:flex;flex-direction:column;gap:8px}
+.steps b{font-size:18px}.steps p{margin:0;color:var(--muted);font-size:15px}
+.faq details{border-bottom:1px solid var(--line);padding:4px 0}
+.faq summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:16px;padding:14px 0;font-weight:600;font-size:17px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:'+';font-size:22px;line-height:1;color:var(--acc2,var(--muted))}
+.faq details[open] summary::after{content:'–'}
+.faq p{margin:0 0 16px;color:var(--muted);max-width:68ch}
+.plist li{display:flex;gap:10px;align-items:flex-start}.plist .ck{margin-top:2px;color:var(--acc2,var(--acc))}.plist .ck svg{width:18px;height:18px}
+.hero-fig{position:relative}
+.col-badge{position:absolute;display:flex;align-items:center;gap:10px;padding:14px 18px;border-radius:16px;background:#fff;color:#111;box-shadow:0 14px 34px rgba(0,0,0,.14);font-size:14px;max-width:260px}
+.col-badge b{font-family:var(--fd);font-size:24px;line-height:1.05}
+.col-badge-t{display:flex;flex-direction:column;gap:3px;min-width:0}.col-badge-t span{overflow-wrap:normal;line-height:1.3}
 .prose{margin:0;font-size:clamp(19px,1.8vw,22px);line-height:1.7;color:var(--muted)}
 .svc{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:0 40px}
 .svc li{display:flex;flex-direction:column;gap:2px;padding:16px 0;border-bottom:1px solid var(--line)}
@@ -110,21 +141,55 @@ h2{font-size:clamp(28px,3.2vw,44px)}
 .duo{gap:22px}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
-:root{--bg:#efebe4;--ink:#221d18;--muted:#5b5248;--line:#dcd5c9;--acc:#c0955a;--accInk:#1d1812;--fd:'Archivo',sans-serif;--fb:'Instrument Sans',system-ui,sans-serif;--hw:600;--r-img:6px;--r-in:6px;--field:#fff}
-h1,h2,h3,.brand,.phones a{font-stretch:118%}
-.hero-in{display:flex;flex-wrap:wrap;gap:48px 72px;align-items:center;padding-top:clamp(32px,6vw,96px);padding-bottom:clamp(64px,8vw,120px)}
-.hero-text{flex:1 1 400px;display:flex;flex-direction:column;gap:24px}
-.hero-hours{margin:0;color:var(--muted)}
-.hero-fig{flex:1.3 1 460px;margin:0;display:flex;flex-direction:column;gap:10px}
-.hero-fig img{width:100%;aspect-ratio:16/10;object-fit:cover;border-radius:6px;background:#000}
-.hero-fig figcaption{font-size:14px;color:var(--muted)}
+:root{--bg:#efebe4;--ink:#221d18;--muted:#5b5248;--line:#dcd5c9;--acc:#c9a063;--accInk:#1d1812;--acc2:#7e6541;--fd:'Archivo',sans-serif;--fb:'Instrument Sans',system-ui,sans-serif;--hw:600;--r-img:10px;--r-in:8px;--field:#fff}
+h1,h2,h3,.brand,.phones a,.facts dt,.pr-v,.col-badge b{font-stretch:116%}
+.sec{padding:clamp(52px,6vw,88px) 0}
+.top{background:rgba(255,255,255,0.55);border-bottom:1px solid rgba(34,29,24,0.06)}
+.hero-split{background-color:#efebe4;background-image:repeating-linear-gradient(0deg,rgba(34,29,24,0.05) 0 1px,transparent 1px 32px),repeating-linear-gradient(90deg,rgba(34,29,24,0.05) 0 1px,transparent 1px 32px);border-bottom:1px solid rgba(34,29,24,0.08)}
+.hero-in{display:flex;flex-wrap:wrap;gap:40px 64px;align-items:center;padding-top:clamp(28px,4vw,64px);padding-bottom:clamp(40px,5vw,80px)}
+.hero-text{flex:1 1 420px;display:flex;flex-direction:column;gap:22px}
+.hero-split h1{font-size:clamp(40px,5.2vw,70px)}
+.hero-hours{margin:0;display:inline-flex;align-self:flex-start;gap:10px;align-items:center;padding:10px 14px;border-radius:8px;background:#fff;border:1px solid #dcd5c9;font-size:15px}
+.hero-hours::before{content:'';width:8px;height:8px;border-radius:50%;background:#2fa36b;box-shadow:0 0 0 4px rgba(47,163,107,0.18)}
+.hero-fig{flex:1.15 1 460px;margin:0 0 28px;min-width:0}
+.col-main{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:12px;background:#0b0f13;box-shadow:0 24px 60px rgba(34,29,24,0.18)}
+.col-s{position:absolute;object-fit:cover;border-radius:10px;border:5px solid #fff;box-shadow:0 14px 34px rgba(34,29,24,0.2)}
+.col-s1{width:38%;aspect-ratio:4/3;left:-7%;bottom:-28px}
+.col-s2{width:30%;aspect-ratio:1;right:-4%;top:-26px}
+.col-badge{right:16px;bottom:16px;background:#c9a063;color:#1d1812}
+.has-col .col-badge{right:auto;left:36%;bottom:-22px;max-width:300px}
+.col-badge .ic{width:40px;height:40px;border-radius:10px;background:rgba(29,24,18,0.1)}
+.hero-fig figcaption{position:absolute;left:12px;top:12px;font-size:13px;padding:6px 10px;border-radius:6px;background:rgba(38,33,27,0.72);color:#fff}
 .tone-white{background:#fff}
-.tone-dark{background:#26211b;color:#eef3f6;--ink:#eef3f6;--muted:rgba(238,243,246,0.68);--line:rgba(255,255,255,0.14);--field:rgba(255,255,255,0.06)}
-.tone-acc{background:#c0955a;color:#1d1812;--ink:#1d1812;--muted:rgba(29,24,18,0.78);--line:rgba(29,24,18,0.2);--acc:#1d1812;--accInk:#c0955a}
-.tone-dark .box-shape i{border-color:#c0955a}
-.pr-v{font-family:var(--fd);font-stretch:112%;font-weight:600}
-.quotes blockquote{font-size:19px;font-weight:500}
+.tone-dark{background:#26211b;color:#eef3f6;--ink:#eef3f6;--muted:rgba(238,243,246,0.7);--line:rgba(255,255,255,0.14);--field:rgba(255,255,255,0.06);--acc2:#c9a063}
+.tone-acc{background:#c9a063;color:#1d1812;--ink:#1d1812;--muted:rgba(29,24,18,0.8);--line:rgba(29,24,18,0.2);--acc:#1d1812;--accInk:#c9a063;--acc2:#1d1812}
+.tone-dark .box-shape i{border-color:#c9a063}
+.facts dt{font-weight:600}
+.facts div{padding-left:18px;border-left:3px solid #c9a063}
+.facts .ic{display:none}
+.cards{grid-template-columns:repeat(auto-fill,minmax(260px,1fr))}
+.card{padding:22px;border-radius:12px;background:#fff;border:1px solid #dcd5c9;transition:transform .2s ease,box-shadow .2s ease}
+.tone-white .card{background:#f8f6f3}
+.card:hover{transform:translateY(-2px);box-shadow:0 14px 30px rgba(34,29,24,0.08)}
+.card .ic{width:46px;height:46px;border-radius:10px;background:rgba(201,160,99,0.28);color:#221d18}
+.pr-v{font-family:var(--fd);font-weight:600}
+.duo-img{align-items:center}
+.duo-img .sp-img{flex:1 1 420px;width:100%;max-height:none;aspect-ratio:4/3;order:2}
+.duo-img .duo-h,.duo-img .duo-b{flex:1 1 360px}
+.boxes{border-top:1px solid var(--line);padding-top:32px}
+.steps{position:relative}
+.steps li{padding:22px;border-radius:12px;background:#fff;border:1px solid #dcd5c9}
+.steps .ic{width:46px;height:46px;border-radius:50%;background:#26211b;color:#c9a063}
+.gal{grid-template-columns:repeat(4,minmax(0,1fr));grid-auto-rows:190px;gap:12px}
+.gal img{height:100%;aspect-ratio:auto}
+.gal figure{position:relative}.gal a{height:100%}
+.gal figcaption{position:absolute;left:10px;bottom:10px;padding:4px 9px;border-radius:6px;background:rgba(38,33,27,0.72);color:#fff;font-size:12px}
+.gal-5 figure:first-child,.gal-4 figure:first-child{grid-column:span 2;grid-row:span 2}
+.gal-3 figure:first-child{grid-column:span 2}
+.quotes blockquote{font-size:19px;font-weight:500;padding:24px;border-radius:12px;background:#f7f5f2;border:1px solid #dcd5c9}
+.faq summary{font-family:var(--fd);font-stretch:108%}
 .dock{--dockBg:#fff}
+@media (max-width:820px){.gal{grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:150px}.col-s1{left:-2%}.col-s2{right:-2%}.has-col .col-badge{left:auto;right:8px}}
 </style>
 </head>
 <body class="t-rendgen">
@@ -132,13 +197,18 @@ h1,h2,h3,.brand,.phones a{font-stretch:118%}
 <nav class="nav" aria-label="Glavni meni"><a href="#usluge">Usluge</a><a href="#kontakt">Kontakt</a></nav>
 <a class="btn btn-call" href="tel:+381641482065"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2"/></svg><span>064 148 2065</span></a></div></header>
 <section class="hero hero-split" id="vrh"><div class="in hero-in">
-<div class="hero-text"><h1>Specijalistički centar<br>sa 3D snimanjem</h1><p class="lead">Specijalistička zdravstvena ustanova u Nišu. Individualni plan lečenja i sve vrste stomatoloških intervencija, uz CBCT snimanje u istom centru.</p><p class="hero-hours">Pon, sre, čet, pet 11–15 h, Utorak 12–20 h, Subota 12–14 h</p><div class="ctas"><a class="btn btn-main" href="tel:+381641482065"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2"/></svg><span>Pozovite 064 148 2065</span></a><a class="btn btn-alt" href="#zakazivanje"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg><span>Zakažite pregled</span></a></div><a class="rating" href="https://www.google.com/maps/place/Stomatolo%C5%A1ki+centar+Ni%C5%A1/data=!4m7!3m6!1s0x4755b148b191ef6f:0xb5bd912443576644!8m2!3d43.3216482!4d21.9152136!16s%2Fg%2F11fl0yr4ls!19sChIJb--RsUixVUcRRGZXQySRvbU?authuser=0&amp;hl=sr&amp;g_ep=EgoyMDI2MTAyMC4wIJJjKgBIAVAD&amp;rclk=1" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6L2.5 9.4l6.6-.8z"/></svg><b>4,4</b><span>43 ocena na Google-u</span></a></div>
-<figure class="hero-fig"><img class="" src="img/01.jpg" alt="Ordinacija Stomatološkog centra Niš" decoding="async" fetchpriority="high"></figure>
+<div class="hero-text"><h1>Specijalistički centar<br>sa 3D snimanjem</h1><p class="lead">Specijalistička zdravstvena ustanova, osnovana da pruži siguran, predvidiv i najbolji mogući tretman u najkraćem roku. Individualni plan lečenja i CBCT snimanje u istom centru.</p><p class="hero-hours">Pon, sre, čet, pet 11–15 h, Utorak 12–20 h, Subota 12–14 h</p><div class="ctas"><a class="btn btn-main" href="tel:+381641482065"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2"/></svg><span>Pozovite 064 148 2065</span></a><a class="btn btn-alt" href="#zakazivanje"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg><span>Zakažite pregled</span></a></div><a class="rating" href="https://www.google.com/maps/place/Stomatolo%C5%A1ki+centar+Ni%C5%A1/data=!4m7!3m6!1s0x4755b148b191ef6f:0xb5bd912443576644!8m2!3d43.3216482!4d21.9152136!16s%2Fg%2F11fl0yr4ls!19sChIJb--RsUixVUcRRGZXQySRvbU?authuser=0&amp;hl=sr&amp;g_ep=EgoyMDI2MTAyMC4wIJJjKgBIAVAD&amp;rclk=1" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6L2.5 9.4l6.6-.8z"/></svg><b>4,4</b><span>43 ocena na Google-u</span></a></div>
+<figure class="hero-fig has-col"><img class="col-main" src="img/86.jpg" alt="Ordinacija Stomatološkog centra Niš" decoding="async" fetchpriority="high"><img class="col-s col-s1" src="img/22.jpg" alt="Zgrada" loading="lazy" decoding="async"><img class="col-s col-s2" src="img/91.jpg" alt="CBCT snimak na ekranu" loading="lazy" decoding="async"><div class="col-badge"><span class="ic"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9z"/><path d="M12 12l8-4.5M12 12v9M12 12L4 7.5"/></svg></span><div class="col-badge-t"><b>3D CBCT</b><span>snimanje u istom centru</span></div></div></figure>
 </div></section>
-<main><section class="sec s-usluge tone-white" id="usluge"><div class="in"><div class="duo"><div class="duo-h"><h2>Šta radimo</h2></div><div class="duo-b"><ul class="svc"><li><b>Orofacijalna hirurgija i implantologija</b><span>Vađenje impaktiranih zuba, najčešće umnjaka</span></li><li><b>Protetika</b><span>Bezmetalna keramika, fleksibilne proteze</span></li><li><b>Ortodoncija</b><span>Estetske bravice od keramike, plastike i polusafirnog stakla</span></li><li><b>Radiološka dijagnostika</b><span>3D snimanje CBCT skenerom</span></li><li><b>Estetska stomatologija</b><span>Za skladniji i lepši osmeh</span></li><li><b>Parodontologija</b><span>Terapija parodontalne bolesti</span></li><li><b>Dečja stomatologija</b><span>Stomatološki tretman kod dece</span></li></ul></div></div></div></section>
-<section class="sec s-posebno tone-dark" id="posebno-0"><div class="in"><div class="duo duo-img"><img class="sp-img" src="img/05.jpg" alt="3D snimak, CBCT" loading="lazy" decoding="async"><div class="duo-h"><h2>3D snimak, CBCT</h2><p class="note">Kada standardni 2D snimak nije dovoljan: visoka preciznost uz minimalnu dozu zračenja. Pomaže pri planiranju implantata i lečenju korena zuba i smanjuje rizik od povrede okolnih struktura.</p></div><div class="duo-b"></div></div></div></section>
-<section class="sec s-galerija tone-plain" id="galerija"><div class="in"><div class="gal gal-3"><figure><a href="img/02.jpg" data-lb><img class="" src="img/02.jpg" alt="Ordinacija" loading="lazy" decoding="async"></a><figcaption>Ordinacija</figcaption></figure><figure><a href="img/04.jpg" data-lb><img class="" src="img/04.jpg" alt="Ordinacija" loading="lazy" decoding="async"></a><figcaption>Ordinacija</figcaption></figure><figure><a href="img/06.jpg" data-lb><img class="" src="img/06.jpg" alt="Ordinacija" loading="lazy" decoding="async"></a><figcaption>Ordinacija</figcaption></figure></div></div></section>
-<section class="sec s-utisci tone-acc" id="utisci"><div class="in"><div class="quotes"><blockquote>„Puni su strpljenja i mogu da se opustim u toku rada jer znam da su moji zubi u sigurnim rukama.“</blockquote><blockquote>„Termini zakazanih intervencija se poštuju, ambijent je prijatan, a stomatolozi su veoma profesionalni.“</blockquote><blockquote>„Prvi put sam otišla po preporuci prijatelja i bila pozitivno iznenađena. Sada bih i ja svakome preporučila ovu ordinaciju.“</blockquote></div></div></section>
+<main><section class="sec s-brojke tone-white" id="brojke"><div class="in"><dl class="facts"><div><dt>6</dt><dd>specijalističkih oblasti</dd></div><div><dt>3D</dt><dd>CBCT snimanje u centru</dd></div><div><dt>18+</dt><dd>implantati od punoletstva do duboke starosti</dd></div><div><dt>Utorkom</dt><dd>radimo do 20 h</dd></div></dl></div></section>
+<section class="sec s-usluge tone-plain" id="usluge"><div class="in"><div class="sec-top"><h2>Šta radimo</h2></div>
+<div class="cards"><article class="card"><span class="ic"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.5 3.5l6 6-9.5 9.5-6 1.5 1.5-6z"/><path d="M12.5 5.5l6 6"/></svg></span><h3>Orofacijalna hirurgija i implantologija</h3><p>Hirurško vađenje duboko impaktiranih zuba, najčešće umnjaka, bez oštećenja okolnih struktura. Sinus lift i mini implantati.</p></article><article class="card"><span class="ic"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8.5C5 13 8.3 15 12 15s7-2 9-6.5"/><path d="M5 10.5v2.5M8 12.6v2.6M12 13.4v2.8M16 12.6v2.6M19 10.5v2.5"/><path d="M3 8.5c3 4.5 15 4.5 18 0"/></svg></span><h3>Protetika</h3><p>Krunice, mostovi i proteze, uključujući fleksibilne proteze koje su udobnije za nošenje.</p></article><article class="card"><span class="ic"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9l3-4 2.5 3L12 4l2.5 4L17 5l3 4"/><path d="M5 9.5h14"/><path d="M5.5 9.5c0 4 1 6.5 1.6 9.5h9.8c.6-3 1.6-5.5 1.6-9.5"/></svg></span><h3>Bezmetalna keramika</h3><p>Cirkonijum i litijum-disilikat: prirodna transparencija i prelamanje svetla kao kod gleđi.</p></article><article class="card"><span class="ic"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5c3 2 6 3 9 3s6-1 9-3"/><rect x="5" y="9.2" width="3" height="3" rx=".6"/><rect x="10.5" y="11" width="3" height="3" rx=".6"/><rect x="16" y="9.2" width="3" height="3" rx=".6"/></svg></span><h3>Ortodoncija</h3><p>Estetske bravice od polusafirnog stakla, keramike ili plastike, i folije za blaže nepravilnosti.</p></article><article class="card"><span class="ic"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9z"/><path d="M12 12l8-4.5M12 12v9M12 12L4 7.5"/></svg></span><h3>Radiološka dijagnostika</h3><p>Trodimenzionalni snimak CBCT skenerom, kada 2D snimak nije dovoljan.</p></article><article class="card"><span class="ic"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.5 3.5c1.6 0 2.7.9 4.5.9s2.9-.9 4.5-.9c2.4 0 4 1.9 4 4.6 0 3-1.3 4.6-2 7.4-.6 2.6-.9 5-2.4 5-1.7 0-1.6-4.7-4.1-4.7S9.6 20.5 7.9 20.5c-1.5 0-1.8-2.4-2.4-5-.7-2.8-2-4.4-2-7.4 0-2.7 1.6-4.6 4-4.6z" transform="translate(-2 2) scale(.8)"/><path d="M18 3v4M16 5h4M20.5 9.5v2M19.5 10.5h2"/></svg></span><h3>Estetska stomatologija</h3><p>Kompozitne i keramičke fasete za lepši oblik, veličinu i boju prednjih zuba.</p></article><article class="card"><span class="ic"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8c2.5 2 5.5 3 9 3s6.5-1 9-3"/><path d="M5.5 10c0 3 .7 5.5 1.5 8M10 11v8M14 11v8M18.5 10c0 3-.7 5.5-1.5 8"/></svg></span><h3>Parodontologija</h3><p>Terapija hroničnog oboljenja potpornog aparata zuba pre nego što dovede do rasklaćenja.</p></article><article class="card"><span class="ic"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.5 3.5c1.6 0 2.7.9 4.5.9s2.9-.9 4.5-.9c2.4 0 4 1.9 4 4.6 0 3-1.3 4.6-2 7.4-.6 2.6-.9 5-2.4 5-1.7 0-1.6-4.7-4.1-4.7S9.6 20.5 7.9 20.5c-1.5 0-1.8-2.4-2.4-5-.7-2.8-2-4.4-2-7.4 0-2.7 1.6-4.6 4-4.6z"/></svg></span><h3>Dečja stomatologija</h3><p>Stomatološki tretman kod dece.</p></article><figure class="card card-img"><img class="" src="img/83.jpg" alt="Stomatološki centar Niš" loading="lazy" decoding="async"></figure></div></div></section>
+<section class="sec s-posebno tone-dark" id="posebno-0"><div class="in"><div class="sp-split"><img class="sp-img" src="img/17.jpg" alt="3D snimak, CBCT" loading="lazy" decoding="async"><div class="sp-text"><h2>3D snimak, CBCT</h2><p class="note">Kada želimo da prevaziđemo nedostatke 2D radiografije: visoka preciznost uz minimalnu dozu zračenja.</p><ul class="plist"><li><span class="ck"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 12.5l4.5 4.5L19.5 7"/></svg></span><span>Planiranje implantata uz manji rizik od povrede okolnih struktura</span></li><li><span class="ck"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 12.5l4.5 4.5L19.5 7"/></svg></span><span>Lečenje korena zuba i promena oko vrha korena</span></li><li><span class="ck"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 12.5l4.5 4.5L19.5 7"/></svg></span><span>Dijagnostika cista i tumora vilica</span></li><li><span class="ck"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 12.5l4.5 4.5L19.5 7"/></svg></span><span>Najkomplikovaniji klinički slučajevi</span></li></ul></div></div></div></section>
+<section class="sec s-galerija tone-white" id="galerija"><div class="in"><div class="gal gal-5"><figure><a href="img/84.jpg" data-lb><img class="" src="img/84.jpg" alt="Ordinacija" loading="lazy" decoding="async"></a><figcaption>Ordinacija</figcaption></figure><figure><a href="img/82.jpg" data-lb><img class="" src="img/82.jpg" alt="Ordinacija" loading="lazy" decoding="async"></a><figcaption>Ordinacija</figcaption></figure><figure><a href="img/88.jpg" data-lb><img class="" src="img/88.jpg" alt="Ordinacija" loading="lazy" decoding="async"></a><figcaption>Ordinacija</figcaption></figure><figure><a href="img/89.jpg" data-lb><img class="" src="img/89.jpg" alt="Ordinacija" loading="lazy" decoding="async"></a><figcaption>Ordinacija</figcaption></figure><figure><a href="img/60.jpg" data-lb><img class="" src="img/60.jpg" alt="Bezmetalni radovi" loading="lazy" decoding="async"></a><figcaption>Bezmetalni radovi</figcaption></figure></div></div></section>
+<section class="sec s-posebno tone-acc" id="posebno-1"><div class="in"><div class="duo"><div class="duo-h"><h2>Ortodoncija bez granice godina</h2><p class="note">Ograničenje za ortodontski tretman u pogledu životne starosti skoro i da ne postoji.</p></div><div class="duo-b"><ul class="plist"><li><span class="ck"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 12.5l4.5 4.5L19.5 7"/></svg></span><span>Fiksni aparati sa estetskim, skoro nevidljivim bravicama</span></li><li><span class="ck"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 12.5l4.5 4.5L19.5 7"/></svg></span><span>Folije za ispravljanje blažih nepravilnosti</span></li><li><span class="ck"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 12.5l4.5 4.5L19.5 7"/></svg></span><span>Hirurško-ortodontski tretman teških nepravilnosti</span></li><li><span class="ck"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 12.5l4.5 4.5L19.5 7"/></svg></span><span>Izvlačenje impaktiranih zuba u pravilan položaj</span></li></ul></div></div></div></section>
+<section class="sec s-pitanja tone-plain" id="pitanja"><div class="in"><div class="duo"><div class="duo-h"><h2>Pitanja pacijenata</h2></div>
+<div class="duo-b faq"><details open><summary>Da li svi mogu da stave implante?</summary><p>Implantati se mogu ugraditi svakoj osobi koja je navršila 18 godina, sve do duboke starosti, ako je zdravstveno stanje adekvatno. Ugradnja je uvek individualna procena opšteg zdravlja i stanja kosti.</p></details><details><summary>Kako se održavaju implantati?</summary><p>Implantati i krunice ne traže posebno održavanje, ali desni oko njih traže pažljivu oralnu higijenu i redovne kontrole.</p></details><details><summary>Folija ili fiksni aparat?</summary><p>Odluka posle analize iskusnog ortodonta. Folije su estetski prihvatljivije i za blaže nepravilnosti, ali ne mogu uvek da zamene fiksni aparat.</p></details><details><summary>Kompozitne ili keramičke fasete?</summary><p>Kompozitne se rade direktno, u jednoj poseti, od materijala za bele plombe. Keramičke se izrađuju indirektno: u prvoj poseti se zubi pripremaju.</p></details></div></div></div></section>
+<section class="sec s-utisci tone-white" id="utisci"><div class="in"><div class="quotes"><blockquote>„Puni su strpljenja i mogu da se opustim u toku rada jer znam da su moji zubi u sigurnim rukama.“</blockquote><blockquote>„Termini zakazanih intervencija se poštuju, ambijent je prijatan, a stomatolozi su veoma profesionalni.“</blockquote><blockquote>„Prvi put sam otišla po preporuci prijatelja i bila pozitivno iznenađena. Sada bih i ja svakome preporučila ovu ordinaciju.“</blockquote></div></div></section>
 <section class="sec s-zakazivanje tone-white" id="zakazivanje"><div class="in"><div class="duo"><div class="duo-h"><h2>Zakažite pregled</h2><p class="note">Ostavite ime i broj, a mi vas zovemo da dogovorimo termin.</p></div>
 <form class="duo-b book" data-mail="stomatoloskicentarnis@yahoo.com" data-name="Stomatološki centar Niš">
 <label>Ime i prezime<input name="ime" autocomplete="name" required></label>

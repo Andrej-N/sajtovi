@@ -2,6 +2,7 @@
 // a hero variant and default section tones. Per business, b.look can recolor (pal), reorder (order) and retone sections (tones).
 // Tones: plain | white | dark | acc | soft | photo (photo = their photo behind a glass panel, staklo only).
 const { esc, fmtPhone, telHref, showRating } = require('../shared');
+const ikona = require('./ikone');
 
 const nl = (s) => esc(s).replace(/\n/g, '<br>');
 const img = (x, cls = '', extra = '') => x ? `<img class="${cls}" src="${esc(x.src)}" alt="${esc(x.alt)}" loading="lazy" decoding="async"${extra}>` : '';
@@ -34,6 +35,14 @@ function shell(id, b, skin, inner, extra = '') {
   return `<section class="sec s-${id.replace(/-\d+$/, '')} tone-${tone}" id="${id}"${extra}>${bd ? img(bd, 'bd') + '<div class="bd-shade"></div>' : ''}<div class="in">${inner}</div></section>`;
 }
 
+// hero picture: main photo, up to two smaller ones overlapping, and a floating fact card
+function collage(b) {
+  if (!b.hero) return '';
+  const small = (b.heroImgs || []).map((x, i) => img(x, 'col-s col-s' + (i + 1))).join('');
+  const badge = b.heroBadge ? `<div class="col-badge">${b.heroBadge.icon ? `<span class="ic">${ikona(b.heroBadge.icon)}</span>` : ''}<div class="col-badge-t"><b>${esc(b.heroBadge.v)}</b><span>${esc(b.heroBadge.l)}</span></div></div>` : '';
+  return `<figure class="hero-fig${small ? ' has-col' : ''}">${eager(b.hero, 'col-main')}${small}${badge}${b.heroCap ? `<figcaption>${esc(b.heroCap)}</figcaption>` : ''}</figure>`;
+}
+
 const S = {
   hero(b, skin) {
     const h = b.hero;
@@ -42,13 +51,13 @@ const S = {
 <div class="in hero-in"><div class="glass hero-card">${text}<div class="ctas">${call(b, 'btn btn-main', 'Pozovite')}${book(b, 'btn btn-glass')}</div>${ratingLink(b, 'rating')}</div></div></section>`;
     if (skin.hero === 'tile') return `<section class="sec s-hero tone-white" id="vrh"><div class="in">${text}<div class="ctas">${call(b, 'btn btn-main', 'Pozovite')}${book(b)}</div></div></section>`;
     if (skin.hero === 'editorial') return `<section class="hero hero-ed" id="vrh"><div class="in hero-in">
-<div class="hero-text"><h1>${nl(b.title)}</h1><div class="hero-sub"><p class="lead">${esc(b.intro)}</p>${call(b, 'btn btn-main', fmtPhone(b.phones[0]))}</div>${ratingLink(b)}</div>
-${h ? `<figure class="hero-fig">${eager(h, '')}${b.heroCap ? `<figcaption>${esc(b.heroCap)}</figcaption>` : ''}</figure>` : ''}
+<div class="hero-text"><h1>${nl(b.title)}</h1><div class="hero-sub"><p class="lead">${esc(b.intro)}</p><div class="ctas">${call(b, 'btn btn-main', fmtPhone(b.phones[0]))}${book(b)}</div></div>${ratingLink(b)}</div>
+${collage(b)}
 </div></section>`;
     // split (rendgen)
     return `<section class="hero hero-split" id="vrh"><div class="in hero-in">
 <div class="hero-text">${text}${b.hours ? `<p class="hero-hours">${esc(hoursText(b))}</p>` : ''}<div class="ctas">${call(b)}${book(b)}</div>${ratingLink(b)}</div>
-${h ? `<figure class="hero-fig">${eager(h, '')}${b.heroCap ? `<figcaption>${esc(b.heroCap)}</figcaption>` : ''}</figure>` : ''}
+${collage(b)}
 </div></section>`;
   },
 
@@ -70,11 +79,32 @@ ${h ? `<figure class="hero-fig">${eager(h, '')}${b.heroCap ? `<figcaption>${esc(
   usluge(b, skin) {
     const sv = b.services;
     if (!sv?.length) return '';
+    if (sv.some((x) => x && x.t)) {
+      return shell('usluge', b, skin, `<div class="sec-top"><h2>${nl(b.servicesTitle || 'Šta radimo')}</h2>${b.servicesNote ? `<p class="note">${esc(b.servicesNote)}</p>` : ''}</div>
+<div class="cards">${sv.map((x) => `<article class="card"><span class="ic">${x.icon ? ikona(x.icon) : ikona.za(x.t)}</span><h3>${esc(x.t)}</h3>${x.d ? `<p>${esc(x.d)}</p>` : ''}</article>`).join('')}${b.servicesImg ? `<figure class="card card-img">${img(b.servicesImg)}</figure>` : ''}</div>`);
+    }
     const rich = sv.some((x) => Array.isArray(x));
     const body = rich
       ? `<ul class="svc">${sv.map((x) => Array.isArray(x) ? `<li><b>${esc(x[0])}</b><span>${esc(x[1])}</span></li>` : `<li><b>${esc(x)}</b></li>`).join('')}</ul>`
       : `<p class="prose">${esc(sv.join(', '))}.</p>`;
     return shell('usluge', b, skin, `<div class="duo"><div class="duo-h"><h2>${nl(b.servicesTitle || 'Šta radimo')}</h2>${b.servicesNote ? `<p class="note">${esc(b.servicesNote)}</p>` : ''}</div><div class="duo-b">${body}</div></div>`);
+  },
+
+  brojke(b, skin) {
+    if (!b.facts?.length) return '';
+    return shell('brojke', b, skin, `<dl class="facts">${b.facts.map(([v, l, ic]) => `<div>${ic ? `<span class="ic">${ikona(ic)}</span>` : ''}<dt>${esc(v)}</dt><dd>${esc(l)}</dd></div>`).join('')}</dl>`);
+  },
+
+  koraci(b, skin) {
+    if (!b.steps?.length) return '';
+    return shell('koraci', b, skin, `<div class="sec-top"><h2>${nl(b.stepsTitle || 'Kako izgleda dolazak')}</h2></div>
+<ol class="steps">${b.steps.map(([t, d, ic]) => `<li><span class="ic">${ikona(ic || 'zub')}</span><b>${esc(t)}</b>${d ? `<p>${esc(d)}</p>` : ''}</li>`).join('')}</ol>`);
+  },
+
+  pitanja(b, skin) {
+    if (!b.faq?.length) return '';
+    return shell('pitanja', b, skin, `<div class="duo"><div class="duo-h"><h2>${nl(b.faqTitle || 'Pitanja pacijenata')}</h2>${b.faqNote ? `<p class="note">${esc(b.faqNote)}</p>` : ''}</div>
+<div class="duo-b faq">${b.faq.map(([q, a], i) => `<details${i === 0 ? ' open' : ''}><summary>${esc(q)}</summary><p>${esc(a)}</p></details>`).join('')}</div></div>`);
   },
 
   cene(b, skin) {
@@ -97,14 +127,14 @@ ${p.extra ? `<p class="note pr-extra">${esc(p.extra)}</p>` : ''}</div></div>`);
     if (!x) return '';
     const id = 'posebno-' + i;
     if (!x.d && !x.list && !x.boxes && !x.img) return shell(id, b, skin, `<p class="quote-big">${nl(x.t)}</p>`);
-    const list = x.list ? `<ul class="plist">${x.list.map((l) => `<li>${esc(l)}</li>`).join('')}</ul>` : '';
+    const list = x.list ? `<ul class="plist">${x.list.map((l) => `<li><span class="ck">${ikona(x.listIcon || 'cek')}</span><span>${esc(l)}</span></li>`).join('')}</ul>` : '';
     const boxes = x.boxes ? `<div class="boxes">${x.boxes.map((bx) => `<div class="box">${bx.w ? `<div class="box-shape"><i style="width:${bx.w}px;height:${bx.h}px"></i></div>` : ''}<b>${esc(bx.t)}</b>${bx.d ? `<span>${esc(bx.d)}</span>` : ''}${bx.v ? `<em>${esc(bx.v)}</em>` : ''}</div>`).join('')}</div>` : '';
-    return shell(id, b, skin, `<div class="duo${x.img ? ' duo-img' : ''}">${x.img ? img(x.img, 'sp-img') : ''}<div class="duo-h"><h2>${nl(x.t)}</h2>${x.d ? `<p class="note">${esc(x.d)}</p>` : ''}</div><div class="duo-b">${list}</div></div>${boxes}`);
+    return shell(id, b, skin, `${x.img ? `<div class="sp-split">${img(x.img, 'sp-img')}<div class="sp-text"><h2>${nl(x.t)}</h2>${x.d ? `<p class="note">${esc(x.d)}</p>` : ''}${list}</div></div>` : `<div class="duo"><div class="duo-h"><h2>${nl(x.t)}</h2>${x.d ? `<p class="note">${esc(x.d)}</p>` : ''}</div><div class="duo-b">${list}</div></div>`}${boxes}`);
   },
 
   galerija(b, skin) {
     if (!b.gallery?.length) return '';
-    return shell('galerija', b, skin, `${b.galleryTitle ? `<h2>${nl(b.galleryTitle)}</h2>` : ''}<div class="gal gal-${Math.min(b.gallery.length, 4)}">${b.gallery.map((g) => `<figure><a href="${esc(g.src)}" data-lb>${img(g)}</a>${g.cap ? `<figcaption>${esc(g.cap)}</figcaption>` : ''}</figure>`).join('')}</div>`);
+    return shell('galerija', b, skin, `${b.galleryTitle ? `<h2>${nl(b.galleryTitle)}</h2>` : ''}<div class="gal gal-${Math.min(b.gallery.length, 5)}">${b.gallery.map((g) => `<figure><a href="${esc(g.src)}" data-lb>${img(g)}</a>${g.cap ? `<figcaption>${esc(g.cap)}</figcaption>` : ''}</figure>`).join('')}</div>`);
   },
 
   utisci(b, skin) {
@@ -227,7 +257,38 @@ h2{font-size:clamp(28px,3.2vw,44px)}
 .duo-h{flex:1 1 260px;display:flex;flex-direction:column;gap:14px}
 .duo-b{flex:2 1 520px;min-width:0}
 .duo-b:empty{display:none}
+.sp-split{display:flex;flex-wrap:wrap;gap:32px 64px;align-items:center}
+.sp-split .sp-img{flex:1 1 420px;min-width:0;width:100%;aspect-ratio:4/3;max-height:440px;object-fit:cover;border-radius:var(--r-img,6px)}
+.sp-text{flex:1 1 380px;display:flex;flex-direction:column;gap:18px}
+.sp-text .plist{grid-template-columns:1fr}
 .duo-img .sp-img{flex:1 1 100%;width:100%;max-height:440px;object-fit:cover;border-radius:var(--r-img,6px)}
+.sec-top{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:12px 64px;margin-bottom:32px}
+.sec-top .note{max-width:52ch}
+.ic{display:inline-flex;align-items:center;justify-content:center;flex:none}
+.ic svg{width:24px;height:24px}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:16px}
+.card{display:flex;flex-direction:column;gap:10px;margin:0}
+.card h3{font-size:19px;line-height:1.25;letter-spacing:-.01em}
+.card p{margin:0;color:var(--muted);font-size:15px;line-height:1.55}
+.card-img{padding:0!important;overflow:hidden;grid-column:span 2;grid-row:span 2;order:-1}.card-img img{width:100%;height:100%;min-height:220px;object-fit:cover}
+.facts{margin:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:24px}
+.facts div{display:flex;flex-direction:column;gap:4px}
+.facts dt{font-family:var(--fd);font-size:clamp(34px,3.6vw,52px);line-height:1;letter-spacing:-.03em}
+.facts dd{margin:0;color:var(--muted);font-size:15px}
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px;counter-reset:st}
+.steps li{display:flex;flex-direction:column;gap:8px}
+.steps b{font-size:18px}.steps p{margin:0;color:var(--muted);font-size:15px}
+.faq details{border-bottom:1px solid var(--line);padding:4px 0}
+.faq summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:16px;padding:14px 0;font-weight:600;font-size:17px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:'+';font-size:22px;line-height:1;color:var(--acc2,var(--muted))}
+.faq details[open] summary::after{content:'–'}
+.faq p{margin:0 0 16px;color:var(--muted);max-width:68ch}
+.plist li{display:flex;gap:10px;align-items:flex-start}.plist .ck{margin-top:2px;color:var(--acc2,var(--acc))}.plist .ck svg{width:18px;height:18px}
+.hero-fig{position:relative}
+.col-badge{position:absolute;display:flex;align-items:center;gap:10px;padding:14px 18px;border-radius:16px;background:#fff;color:#111;box-shadow:0 14px 34px rgba(0,0,0,.14);font-size:14px;max-width:260px}
+.col-badge b{font-family:var(--fd);font-size:24px;line-height:1.05}
+.col-badge-t{display:flex;flex-direction:column;gap:3px;min-width:0}.col-badge-t span{overflow-wrap:normal;line-height:1.3}
 .prose{margin:0;font-size:clamp(19px,1.8vw,22px);line-height:1.7;color:var(--muted)}
 .svc{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:0 40px}
 .svc li{display:flex;flex-direction:column;gap:2px;padding:16px 0;border-bottom:1px solid var(--line)}

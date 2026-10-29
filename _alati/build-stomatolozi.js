@@ -58,6 +58,8 @@ async function excelRows() {
       rating: row.rating ? { value: row.rating, count: row.reviews, url: row.maps } : null,
       hero: pic(raw.hero, raw.heroAlt),
       teamImg: pic(raw.teamImg, `Tim: ${name}`),
+      heroImgs: (raw.heroImgs || []).map((g) => Array.isArray(g) ? pic(g[0], g[1]) : pic(g, name)).filter(Boolean),
+      servicesImg: pic(raw.servicesImg, name),
       gallery: (raw.gallery || []).map((g) => Array.isArray(g) ? pic(g[0], g[1], g[1]) : pic(g)).filter(Boolean),
       special: (raw.special || []).map((x) => ({ ...x, img: pic(x.img, x.t) })),
       backdrops: Object.fromEntries(Object.entries(raw.backdrops || {}).map(([k, v]) => [k, pic(v, '')])),

@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
 <title>Petrović Dent, Niš</title>
-<meta name="description" content="Ordinacija za savremenu i estetsku stomatologiju u TC Zona 1, sa sopstvenim digitalnim rendgen kabinetom.">
+<meta name="description" content="Ordinacija za savremenu i estetsku stomatologiju u TC Zona 1, sa sopstvenim digitalnim rendgen kabinetom. Svaku fazu postupka objašnjavamo, pa radimo bez napetosti i straha.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
@@ -45,7 +45,38 @@ h2{font-size:clamp(28px,3.2vw,44px)}
 .duo-h{flex:1 1 260px;display:flex;flex-direction:column;gap:14px}
 .duo-b{flex:2 1 520px;min-width:0}
 .duo-b:empty{display:none}
+.sp-split{display:flex;flex-wrap:wrap;gap:32px 64px;align-items:center}
+.sp-split .sp-img{flex:1 1 420px;min-width:0;width:100%;aspect-ratio:4/3;max-height:440px;object-fit:cover;border-radius:var(--r-img,6px)}
+.sp-text{flex:1 1 380px;display:flex;flex-direction:column;gap:18px}
+.sp-text .plist{grid-template-columns:1fr}
 .duo-img .sp-img{flex:1 1 100%;width:100%;max-height:440px;object-fit:cover;border-radius:var(--r-img,6px)}
+.sec-top{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:12px 64px;margin-bottom:32px}
+.sec-top .note{max-width:52ch}
+.ic{display:inline-flex;align-items:center;justify-content:center;flex:none}
+.ic svg{width:24px;height:24px}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:16px}
+.card{display:flex;flex-direction:column;gap:10px;margin:0}
+.card h3{font-size:19px;line-height:1.25;letter-spacing:-.01em}
+.card p{margin:0;color:var(--muted);font-size:15px;line-height:1.55}
+.card-img{padding:0!important;overflow:hidden;grid-column:span 2;grid-row:span 2;order:-1}.card-img img{width:100%;height:100%;min-height:220px;object-fit:cover}
+.facts{margin:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:24px}
+.facts div{display:flex;flex-direction:column;gap:4px}
+.facts dt{font-family:var(--fd);font-size:clamp(34px,3.6vw,52px);line-height:1;letter-spacing:-.03em}
+.facts dd{margin:0;color:var(--muted);font-size:15px}
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px;counter-reset:st}
+.steps li{display:flex;flex-direction:column;gap:8px}
+.steps b{font-size:18px}.steps p{margin:0;color:var(--muted);font-size:15px}
+.faq details{border-bottom:1px solid var(--line);padding:4px 0}
+.faq summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:16px;padding:14px 0;font-weight:600;font-size:17px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:'+';font-size:22px;line-height:1;color:var(--acc2,var(--muted))}
+.faq details[open] summary::after{content:'–'}
+.faq p{margin:0 0 16px;color:var(--muted);max-width:68ch}
+.plist li{display:flex;gap:10px;align-items:flex-start}.plist .ck{margin-top:2px;color:var(--acc2,var(--acc))}.plist .ck svg{width:18px;height:18px}
+.hero-fig{position:relative}
+.col-badge{position:absolute;display:flex;align-items:center;gap:10px;padding:14px 18px;border-radius:16px;background:#fff;color:#111;box-shadow:0 14px 34px rgba(0,0,0,.14);font-size:14px;max-width:260px}
+.col-badge b{font-family:var(--fd);font-size:24px;line-height:1.05}
+.col-badge-t{display:flex;flex-direction:column;gap:3px;min-width:0}.col-badge-t span{overflow-wrap:normal;line-height:1.3}
 .prose{margin:0;font-size:clamp(19px,1.8vw,22px);line-height:1.7;color:var(--muted)}
 .svc{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:0 40px}
 .svc li{display:flex;flex-direction:column;gap:2px;padding:16px 0;border-bottom:1px solid var(--line)}
@@ -110,21 +141,55 @@ h2{font-size:clamp(28px,3.2vw,44px)}
 .duo{gap:22px}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
-:root{--bg:#e7eef5;--ink:#14212e;--muted:#4b5b6b;--line:#d2dde8;--acc:#4aa6e3;--accInk:#0d1a26;--fd:'Archivo',sans-serif;--fb:'Instrument Sans',system-ui,sans-serif;--hw:600;--r-img:6px;--r-in:6px;--field:#fff}
-h1,h2,h3,.brand,.phones a{font-stretch:118%}
-.hero-in{display:flex;flex-wrap:wrap;gap:48px 72px;align-items:center;padding-top:clamp(32px,6vw,96px);padding-bottom:clamp(64px,8vw,120px)}
-.hero-text{flex:1 1 400px;display:flex;flex-direction:column;gap:24px}
-.hero-hours{margin:0;color:var(--muted)}
-.hero-fig{flex:1.3 1 460px;margin:0;display:flex;flex-direction:column;gap:10px}
-.hero-fig img{width:100%;aspect-ratio:16/10;object-fit:cover;border-radius:6px;background:#000}
-.hero-fig figcaption{font-size:14px;color:var(--muted)}
+:root{--bg:#e7eef5;--ink:#14212e;--muted:#4b5b6b;--line:#d2dde8;--acc:#4aa6e3;--accInk:#0d1a26;--acc2:#326a92;--fd:'Archivo',sans-serif;--fb:'Instrument Sans',system-ui,sans-serif;--hw:600;--r-img:10px;--r-in:8px;--field:#fff}
+h1,h2,h3,.brand,.phones a,.facts dt,.pr-v,.col-badge b{font-stretch:116%}
+.sec{padding:clamp(52px,6vw,88px) 0}
+.top{background:rgba(255,255,255,0.55);border-bottom:1px solid rgba(20,33,46,0.06)}
+.hero-split{background-color:#e7eef5;background-image:repeating-linear-gradient(0deg,rgba(20,33,46,0.05) 0 1px,transparent 1px 32px),repeating-linear-gradient(90deg,rgba(20,33,46,0.05) 0 1px,transparent 1px 32px);border-bottom:1px solid rgba(20,33,46,0.08)}
+.hero-in{display:flex;flex-wrap:wrap;gap:40px 64px;align-items:center;padding-top:clamp(28px,4vw,64px);padding-bottom:clamp(40px,5vw,80px)}
+.hero-text{flex:1 1 420px;display:flex;flex-direction:column;gap:22px}
+.hero-split h1{font-size:clamp(40px,5.2vw,70px)}
+.hero-hours{margin:0;display:inline-flex;align-self:flex-start;gap:10px;align-items:center;padding:10px 14px;border-radius:8px;background:#fff;border:1px solid #d2dde8;font-size:15px}
+.hero-hours::before{content:'';width:8px;height:8px;border-radius:50%;background:#2fa36b;box-shadow:0 0 0 4px rgba(47,163,107,0.18)}
+.hero-fig{flex:1.15 1 460px;margin:0 0 28px;min-width:0}
+.col-main{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:12px;background:#0b0f13;box-shadow:0 24px 60px rgba(20,33,46,0.18)}
+.col-s{position:absolute;object-fit:cover;border-radius:10px;border:5px solid #fff;box-shadow:0 14px 34px rgba(20,33,46,0.2)}
+.col-s1{width:38%;aspect-ratio:4/3;left:-7%;bottom:-28px}
+.col-s2{width:30%;aspect-ratio:1;right:-4%;top:-26px}
+.col-badge{right:16px;bottom:16px;background:#4aa6e3;color:#0d1a26}
+.has-col .col-badge{right:auto;left:36%;bottom:-22px;max-width:300px}
+.col-badge .ic{width:40px;height:40px;border-radius:10px;background:rgba(13,26,38,0.1)}
+.hero-fig figcaption{position:absolute;left:12px;top:12px;font-size:13px;padding:6px 10px;border-radius:6px;background:rgba(19,38,58,0.72);color:#fff}
 .tone-white{background:#fff}
-.tone-dark{background:#13263a;color:#eef3f6;--ink:#eef3f6;--muted:rgba(238,243,246,0.68);--line:rgba(255,255,255,0.14);--field:rgba(255,255,255,0.06)}
-.tone-acc{background:#4aa6e3;color:#0d1a26;--ink:#0d1a26;--muted:rgba(13,26,38,0.78);--line:rgba(13,26,38,0.2);--acc:#0d1a26;--accInk:#4aa6e3}
+.tone-dark{background:#13263a;color:#eef3f6;--ink:#eef3f6;--muted:rgba(238,243,246,0.7);--line:rgba(255,255,255,0.14);--field:rgba(255,255,255,0.06);--acc2:#4aa6e3}
+.tone-acc{background:#4aa6e3;color:#0d1a26;--ink:#0d1a26;--muted:rgba(13,26,38,0.8);--line:rgba(13,26,38,0.2);--acc:#0d1a26;--accInk:#4aa6e3;--acc2:#0d1a26}
 .tone-dark .box-shape i{border-color:#4aa6e3}
-.pr-v{font-family:var(--fd);font-stretch:112%;font-weight:600}
-.quotes blockquote{font-size:19px;font-weight:500}
+.facts dt{font-weight:600}
+.facts div{padding-left:18px;border-left:3px solid #4aa6e3}
+.facts .ic{display:none}
+.cards{grid-template-columns:repeat(auto-fill,minmax(260px,1fr))}
+.card{padding:22px;border-radius:12px;background:#fff;border:1px solid #d2dde8;transition:transform .2s ease,box-shadow .2s ease}
+.tone-white .card{background:#f4f7fb}
+.card:hover{transform:translateY(-2px);box-shadow:0 14px 30px rgba(20,33,46,0.08)}
+.card .ic{width:46px;height:46px;border-radius:10px;background:rgba(74,166,227,0.28);color:#14212e}
+.pr-v{font-family:var(--fd);font-weight:600}
+.duo-img{align-items:center}
+.duo-img .sp-img{flex:1 1 420px;width:100%;max-height:none;aspect-ratio:4/3;order:2}
+.duo-img .duo-h,.duo-img .duo-b{flex:1 1 360px}
+.boxes{border-top:1px solid var(--line);padding-top:32px}
+.steps{position:relative}
+.steps li{padding:22px;border-radius:12px;background:#fff;border:1px solid #d2dde8}
+.steps .ic{width:46px;height:46px;border-radius:50%;background:#13263a;color:#4aa6e3}
+.gal{grid-template-columns:repeat(4,minmax(0,1fr));grid-auto-rows:190px;gap:12px}
+.gal img{height:100%;aspect-ratio:auto}
+.gal figure{position:relative}.gal a{height:100%}
+.gal figcaption{position:absolute;left:10px;bottom:10px;padding:4px 9px;border-radius:6px;background:rgba(19,38,58,0.72);color:#fff;font-size:12px}
+.gal-5 figure:first-child,.gal-4 figure:first-child{grid-column:span 2;grid-row:span 2}
+.gal-3 figure:first-child{grid-column:span 2}
+.quotes blockquote{font-size:19px;font-weight:500;padding:24px;border-radius:12px;background:#f3f7fa;border:1px solid #d2dde8}
+.faq summary{font-family:var(--fd);font-stretch:108%}
 .dock{--dockBg:#fff}
+@media (max-width:820px){.gal{grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:150px}.col-s1{left:-2%}.col-s2{right:-2%}.has-col .col-badge{left:auto;right:8px}}
 </style>
 </head>
 <body class="t-rendgen">
@@ -132,14 +197,20 @@ h1,h2,h3,.brand,.phones a{font-stretch:118%}
 <nav class="nav" aria-label="Glavni meni"><a href="#usluge">Usluge</a><a href="#tim">Tim</a><a href="#kontakt">Kontakt</a></nav>
 <a class="btn btn-call" href="tel:+38118533119"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2"/></svg><span>018 533 119</span></a></div></header>
 <section class="hero hero-split" id="vrh"><div class="in hero-in">
-<div class="hero-text"><h1>Krunice, implanti<br>i rendgen na jednom mestu</h1><p class="lead">Ordinacija za savremenu i estetsku stomatologiju u TC Zona 1, sa sopstvenim digitalnim rendgen kabinetom.</p><p class="hero-hours">Ponedeljak – petak 9–20 h, Subota 9–15 h</p><div class="ctas"><a class="btn btn-main" href="tel:+38118533119"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2"/></svg><span>Pozovite 018 533 119</span></a><a class="btn btn-alt" href="#zakazivanje"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg><span>Zakažite pregled</span></a></div><a class="rating" href="https://www.google.com/maps/place/PETROVI%C4%86-DENT/data=!4m7!3m6!1s0x4755b0b14f921bab:0x849b4c471cf7f534!8m2!3d43.3188719!4d21.9214569!16s%2Fg%2F11_s5ymrq!19sChIJqxuST7GwVUcRNPX3HEdMm4Q?authuser=0&amp;hl=sr&amp;g_ep=EgoyMDI2MTAyMC4wIJJjKgBIAVAD&amp;rclk=1" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6L2.5 9.4l6.6-.8z"/></svg><b>4,8</b><span>53 ocena na Google-u</span></a></div>
-<figure class="hero-fig"><img class="" src="img/02.jpg" alt="Tim ordinacije Petrović Dent" decoding="async" fetchpriority="high"></figure>
+<div class="hero-text"><h1>Krunice, implanti<br>i rendgen na jednom mestu</h1><p class="lead">Ordinacija za savremenu i estetsku stomatologiju u TC Zona 1, sa sopstvenim digitalnim rendgen kabinetom. Svaku fazu postupka objašnjavamo, pa radimo bez napetosti i straha.</p><p class="hero-hours">Ponedeljak – petak 9–20 h, Subota 9–15 h</p><div class="ctas"><a class="btn btn-main" href="tel:+38118533119"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2"/></svg><span>Pozovite 018 533 119</span></a><a class="btn btn-alt" href="#zakazivanje"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg><span>Zakažite pregled</span></a></div><a class="rating" href="https://www.google.com/maps/place/PETROVI%C4%86-DENT/data=!4m7!3m6!1s0x4755b0b14f921bab:0x849b4c471cf7f534!8m2!3d43.3188719!4d21.9214569!16s%2Fg%2F11_s5ymrq!19sChIJqxuST7GwVUcRNPX3HEdMm4Q?authuser=0&amp;hl=sr&amp;g_ep=EgoyMDI2MTAyMC4wIJJjKgBIAVAD&amp;rclk=1" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6L2.5 9.4l6.6-.8z"/></svg><b>4,8</b><span>53 ocena na Google-u</span></a></div>
+<figure class="hero-fig has-col"><img class="col-main" src="img/02.jpg" alt="Tim ordinacije Petrović Dent" decoding="async" fetchpriority="high"><img class="col-s col-s1" src="img/42.jpg" alt="Rad u ordinaciji" loading="lazy" decoding="async"><img class="col-s col-s2" src="img/13.jpg" alt="Naš rad" loading="lazy" decoding="async"><div class="col-badge"><span class="ic"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9l3-4 2.5 3L12 4l2.5 4L17 5l3 4"/><path d="M5 9.5h14"/><path d="M5.5 9.5c0 4 1 6.5 1.6 9.5h9.8c.6-3 1.6-5.5 1.6-9.5"/></svg></span><div class="col-badge-t"><b>CAD/CAM</b><span>krunice preciznosti do 10 mikrona</span></div></div></figure>
 </div></section>
-<main><section class="sec s-usluge tone-white" id="usluge"><div class="in"><div class="duo"><div class="duo-h"><h2>Šta radimo</h2></div><div class="duo-b"><ul class="svc"><li><b>Krunice od cirkonijuma i keramike</b><span>Oponašaju prirodne zube oblikom i bojom</span></li><li><b>Zubni implanti</b><span>Za jedan, više ili sve zube</span></li><li><b>Pterigoidni i zigoma implanti</b><span>Posebne vrste implanata</span></li><li><b>All-on-4</b><span>Fiksni rad cele vilice na implantima</span></li><li><b>Plombiranje i lečenje kanala</b><span>Bezbolno, uz anestetik</span></li><li><b>Oralna hirurgija</b><span>Vađenje umnjaka</span></li><li><b>Ortodoncija</b><span></span></li><li><b>Izbeljivanje i zubni nakit</b><span></span></li></ul></div></div></div></section>
-<section class="sec s-posebno tone-dark" id="posebno-0"><div class="in"><div class="duo duo-img"><img class="sp-img" src="img/06.jpg" alt="Rendgen kabinet ORTOPAN digital" loading="lazy" decoding="async"><div class="duo-h"><h2>Rendgen kabinet ORTOPAN digital</h2><p class="note">Digitalno snimanje vilica i zuba i snimanje pojedinačnih zuba, u istoj ordinaciji.</p></div><div class="duo-b"></div></div></div></section>
-<section class="sec s-tim tone-plain" id="tim"><div class="in"><div class="team-wrap"><div class="team-body"><h2>Ko vas leči</h2>
+<main><section class="sec s-brojke tone-white" id="brojke"><div class="in"><dl class="facts"><div><dt>10 mikrona</dt><dd>preciznost CAD/CAM izrade krunica</dd></div><div><dt>10+ godina</dt><dd>prosečan vek krune uz pravilnu negu</dd></div><div><dt>4 implanta</dt><dd>nose ceo fiksni rad (All-on-4)</dd></div><div><dt>6–8 nijansi</dt><dd>svetliji zubi posle beljenja</dd></div></dl></div></section>
+<section class="sec s-usluge tone-plain" id="usluge"><div class="in"><div class="sec-top"><h2>Šta radimo</h2></div>
+<div class="cards"><article class="card"><span class="ic"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9l3-4 2.5 3L12 4l2.5 4L17 5l3 4"/><path d="M5 9.5h14"/><path d="M5.5 9.5c0 4 1 6.5 1.6 9.5h9.8c.6-3 1.6-5.5 1.6-9.5"/></svg></span><h3>Cirkonijum i keramičke krune</h3><p>Izrađene CAD/CAM sistemom; po boji i prozračnosti imitiraju prirodan zub.</p></article><article class="card"><span class="ic"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 4.5c1.4 0 2.4.7 5 .7s3.6-.7 5-.7c1.6 0 2.5 1.2 2.5 2.8 0 1.6-.8 2.4-1.5 3.2H6c-.7-.8-1.5-1.6-1.5-3.2C4.5 5.7 5.4 4.5 7 4.5z"/><path d="M9 10.5h6l-.6 9.5h-4.8z"/><path d="M8.8 13h6.4M9 15.5h6M9.2 18h5.6"/></svg></span><h3>Zubni implanti</h3><p>Šrafovi od titanijuma umesto korena zuba, za jedan, više ili sve zube. Susedni zubi se ne bruse.</p></article><article class="card"><span class="ic"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8.5C5 13 8.3 15 12 15s7-2 9-6.5"/><path d="M5 10.5v2.5M8 12.6v2.6M12 13.4v2.8M16 12.6v2.6M19 10.5v2.5"/><path d="M3 8.5c3 4.5 15 4.5 18 0"/></svg></span><h3>All-on-4</h3><p>Cela konstrukcija od 10–12 zuba na samo 4 implanta, umesto privremene proteze koja žulja.</p></article><article class="card"><span class="ic"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 4.5c1.4 0 2.4.7 5 .7s3.6-.7 5-.7c1.6 0 2.5 1.2 2.5 2.8 0 1.6-.8 2.4-1.5 3.2H6c-.7-.8-1.5-1.6-1.5-3.2C4.5 5.7 5.4 4.5 7 4.5z"/><path d="M9 10.5h6l-.6 9.5h-4.8z"/><path d="M8.8 13h6.4M9 15.5h6M9.2 18h5.6"/></svg></span><h3>Pterigoidni i zigoma implanti</h3><p>Za bočne regije gornje vilice kada nema dovoljno kosti; kraće hirurško vreme.</p></article><article class="card"><span class="ic"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.5 3.5c1.6 0 2.7.9 4.5.9s2.9-.9 4.5-.9c2.4 0 4 1.9 4 4.6 0 3-1.3 4.6-2 7.4-.6 2.6-.9 5-2.4 5-1.7 0-1.6-4.7-4.1-4.7S9.6 20.5 7.9 20.5c-1.5 0-1.8-2.4-2.4-5-.7-2.8-2-4.4-2-7.4 0-2.7 1.6-4.6 4-4.6z"/><path d="M10 9.5l.8 6M14 9.5l-.8 6"/></svg></span><h3>Plombiranje i lečenje kanala</h3><p>Bezbolno, uz anestetik. Helio plombe od kompozita i giomera sa nano česticama.</p></article><article class="card"><span class="ic"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.5 3.5l6 6-9.5 9.5-6 1.5 1.5-6z"/><path d="M12.5 5.5l6 6"/></svg></span><h3>Oralna hirurgija</h3><p>Umnjaci, sinus lift, apikotomija, ciste i frenulum, u lokalnoj anesteziji.</p></article><article class="card"><span class="ic"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5c3 2 6 3 9 3s6-1 9-3"/><rect x="5" y="9.2" width="3" height="3" rx=".6"/><rect x="10.5" y="11" width="3" height="3" rx=".6"/><rect x="16" y="9.2" width="3" height="3" rx=".6"/></svg></span><h3>Ortodoncija</h3><p>Mobilni aparati za decu i fiksni aparati, i sa keramičkim, skoro neprimetnim bravicama.</p></article><article class="card"><span class="ic"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.5 3.5c1.6 0 2.7.9 4.5.9s2.9-.9 4.5-.9c2.4 0 4 1.9 4 4.6 0 3-1.3 4.6-2 7.4-.6 2.6-.9 5-2.4 5-1.7 0-1.6-4.7-4.1-4.7S9.6 20.5 7.9 20.5c-1.5 0-1.8-2.4-2.4-5-.7-2.8-2-4.4-2-7.4 0-2.7 1.6-4.6 4-4.6z" transform="translate(-2 2) scale(.8)"/><path d="M18 3v4M16 5h4M20.5 9.5v2M19.5 10.5h2"/></svg></span><h3>Keramičke ljuspice i beljenje</h3><p>Viniri uz minimalno brušenje; ordinacijsko i kućno beljenje.</p></article><figure class="card card-img"><img class="" src="img/43.jpg" alt="Petrović Dent" loading="lazy" decoding="async"></figure></div></div></section>
+<section class="sec s-posebno tone-dark" id="posebno-0"><div class="in"><div class="sp-split"><img class="sp-img" src="img/06.jpg" alt="Rendgen kabinet ORTOPAN digital" loading="lazy" decoding="async"><div class="sp-text"><h2>Rendgen kabinet ORTOPAN digital</h2><p class="note">Ortopan gornje i donje vilice dobijamo za nekoliko sekundi, aparatom finske firme Planmeca. Uz pregled, pomaže da kompletno sagledamo stanje zuba i postavimo tačnu dijagnozu.</p><ul class="plist"><li><span class="ck"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 12.5l4.5 4.5L19.5 7"/></svg></span><span>Digitalni ortopan sa viličnim zglobom i svim zubima</span></li><li><span class="ck"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 12.5l4.5 4.5L19.5 7"/></svg></span><span>Snimak pojedinačnog zuba (dentalni radiogram)</span></li><li><span class="ck"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 12.5l4.5 4.5L19.5 7"/></svg></span><span>Napredni softver za obradu snimka</span></li></ul></div></div></div></section>
+<section class="sec s-koraci tone-plain" id="koraci"><div class="in"><div class="sec-top"><h2>Implanti u dve faze</h2></div>
+<ol class="steps"><li><span class="ic"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7.5 9c1.2-.8 2.6-.8 3.5 0 1 .8 2.4.8 3.5 0 1.2-.8 2.4-.4 2.5.5"/><path d="M8 13v3M11 13.5v3M14 13.5v3M17 13v3"/></svg></span><b>Pregled i snimak</b><p>Ortopan i detaljan pregled pre svake intervencije.</p></li><li><span class="ic"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 4.5c1.4 0 2.4.7 5 .7s3.6-.7 5-.7c1.6 0 2.5 1.2 2.5 2.8 0 1.6-.8 2.4-1.5 3.2H6c-.7-.8-1.5-1.6-1.5-3.2C4.5 5.7 5.4 4.5 7 4.5z"/><path d="M9 10.5h6l-.6 9.5h-4.8z"/><path d="M8.8 13h6.4M9 15.5h6M9.2 18h5.6"/></svg></span><b>Ugradnja</b><p>Ako treba, prvo vađenje zuba, pa posle 2–3 dana ugradnja. Odmah dobijate privremeni rad.</p></li><li><span class="ic"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9l3-4 2.5 3L12 4l2.5 4L17 5l3 4"/><path d="M5 9.5h14"/><path d="M5.5 9.5c0 4 1 6.5 1.6 9.5h9.8c.6-3 1.6-5.5 1.6-9.5"/></svg></span><b>Krunice na implantima</b><p>Definitivne krunice dobijate posle 3–4 meseca.</p></li></ol></div></section>
+<section class="sec s-galerija tone-white" id="galerija"><div class="in"><div class="gal gal-5"><figure><a href="img/08.jpg" data-lb><img class="" src="img/08.jpg" alt="Naš rad" loading="lazy" decoding="async"></a><figcaption>Naš rad</figcaption></figure><figure><a href="img/58.jpg" data-lb><img class="" src="img/58.jpg" alt="Implanti na snimku" loading="lazy" decoding="async"></a><figcaption>Implanti na snimku</figcaption></figure><figure><a href="img/10.jpg" data-lb><img class="" src="img/10.jpg" alt="Naš rad" loading="lazy" decoding="async"></a><figcaption>Naš rad</figcaption></figure><figure><a href="img/12.jpg" data-lb><img class="" src="img/12.jpg" alt="Naš rad" loading="lazy" decoding="async"></a><figcaption>Naš rad</figcaption></figure><figure><a href="img/27.jpg" data-lb><img class="" src="img/27.jpg" alt="Ordinacija" loading="lazy" decoding="async"></a><figcaption>Ordinacija</figcaption></figure></div></div></section>
+<section class="sec s-tim tone-white" id="tim"><div class="in"><div class="team-wrap"><div class="team-body"><h2>Ko vas leči</h2>
 <div class="team"><div class="doc"><b>Dr Borivoje Petrović</b><span class="doc-r">Specijalista stomatološke protetike</span></div><div class="doc"><b>Dr Nikodije Petrović</b><span class="doc-r">Doktor stomatologije</span></div><div class="doc"><b>Dr Strahinja Zrnzević</b><span class="doc-r">Stomatolog</span></div></div></div></div></div></section>
-<section class="sec s-galerija tone-white" id="galerija"><div class="in"><div class="gal gal-2"><figure><a href="img/01.jpg" data-lb><img class="" src="img/01.jpg" alt="Ordinacija" loading="lazy" decoding="async"></a><figcaption>Ordinacija</figcaption></figure><figure><a href="img/05.jpg" data-lb><img class="" src="img/05.jpg" alt="Ordinacija" loading="lazy" decoding="async"></a><figcaption>Ordinacija</figcaption></figure></div></div></section>
+<section class="sec s-pitanja tone-plain" id="pitanja"><div class="in"><div class="duo"><div class="duo-h"><h2>Pitanja pacijenata</h2></div>
+<div class="duo-b faq"><details open><summary>Da li stare plombe moraju da se menjaju?</summary><p>Proceniće stomatolog. Ako su korektno urađene i nema vidljivog karijesa oko plombe, sa promenom se može sačekati.</p></details><details><summary>Koliko traje krunica?</summary><p>Uz pravilnu negu i održavanje prosečni vek krune je preko 10 godina.</p></details><details><summary>Da li je beljenje zuba bezbedno?</summary><p>Beljenje je bezopasan proces: zubi postaju svetliji za šest do osam nijansi, a efekat traje tri do četiri godine.</p></details><details><summary>Da li boli plombiranje?</summary><p>Karijes uklanjamo i plombiramo bezbolno, uz anestetik, i objašnjavamo svaku fazu postupka.</p></details></div></div></div></section>
 <section class="sec s-zakazivanje tone-white" id="zakazivanje"><div class="in"><div class="duo"><div class="duo-h"><h2>Zakažite pregled</h2><p class="note">Ostavite ime i broj, a mi vas zovemo da dogovorimo termin.</p></div>
 <form class="duo-b book" data-mail="ordinacija@petrovicdent.com" data-name="Petrović Dent">
 <label>Ime i prezime<input name="ime" autocomplete="name" required></label>

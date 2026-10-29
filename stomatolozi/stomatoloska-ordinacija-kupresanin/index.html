@@ -5,10 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
 <title>Stomatološka ordinacija Kuprešanin, Subotica</title>
-<meta name="description" content="Ordinacija dr Ivane Kuprešanin Nimčević u samom centru Subotice, sa timom specijalista, stomatoloških sestara i zubnih tehničara.">
+<meta name="description" content="Ordinacija dr Ivane Kuprešanin Nimčević u samom centru Subotice. O vašim zubima brine sa timom specijalista, stomatoloških sestara i zubnih tehničara.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Albert+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Albert+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
@@ -45,7 +45,38 @@ h2{font-size:clamp(28px,3.2vw,44px)}
 .duo-h{flex:1 1 260px;display:flex;flex-direction:column;gap:14px}
 .duo-b{flex:2 1 520px;min-width:0}
 .duo-b:empty{display:none}
+.sp-split{display:flex;flex-wrap:wrap;gap:32px 64px;align-items:center}
+.sp-split .sp-img{flex:1 1 420px;min-width:0;width:100%;aspect-ratio:4/3;max-height:440px;object-fit:cover;border-radius:var(--r-img,6px)}
+.sp-text{flex:1 1 380px;display:flex;flex-direction:column;gap:18px}
+.sp-text .plist{grid-template-columns:1fr}
 .duo-img .sp-img{flex:1 1 100%;width:100%;max-height:440px;object-fit:cover;border-radius:var(--r-img,6px)}
+.sec-top{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:12px 64px;margin-bottom:32px}
+.sec-top .note{max-width:52ch}
+.ic{display:inline-flex;align-items:center;justify-content:center;flex:none}
+.ic svg{width:24px;height:24px}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:16px}
+.card{display:flex;flex-direction:column;gap:10px;margin:0}
+.card h3{font-size:19px;line-height:1.25;letter-spacing:-.01em}
+.card p{margin:0;color:var(--muted);font-size:15px;line-height:1.55}
+.card-img{padding:0!important;overflow:hidden;grid-column:span 2;grid-row:span 2;order:-1}.card-img img{width:100%;height:100%;min-height:220px;object-fit:cover}
+.facts{margin:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:24px}
+.facts div{display:flex;flex-direction:column;gap:4px}
+.facts dt{font-family:var(--fd);font-size:clamp(34px,3.6vw,52px);line-height:1;letter-spacing:-.03em}
+.facts dd{margin:0;color:var(--muted);font-size:15px}
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px;counter-reset:st}
+.steps li{display:flex;flex-direction:column;gap:8px}
+.steps b{font-size:18px}.steps p{margin:0;color:var(--muted);font-size:15px}
+.faq details{border-bottom:1px solid var(--line);padding:4px 0}
+.faq summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:16px;padding:14px 0;font-weight:600;font-size:17px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:'+';font-size:22px;line-height:1;color:var(--acc2,var(--muted))}
+.faq details[open] summary::after{content:'–'}
+.faq p{margin:0 0 16px;color:var(--muted);max-width:68ch}
+.plist li{display:flex;gap:10px;align-items:flex-start}.plist .ck{margin-top:2px;color:var(--acc2,var(--acc))}.plist .ck svg{width:18px;height:18px}
+.hero-fig{position:relative}
+.col-badge{position:absolute;display:flex;align-items:center;gap:10px;padding:14px 18px;border-radius:16px;background:#fff;color:#111;box-shadow:0 14px 34px rgba(0,0,0,.14);font-size:14px;max-width:260px}
+.col-badge b{font-family:var(--fd);font-size:24px;line-height:1.05}
+.col-badge-t{display:flex;flex-direction:column;gap:3px;min-width:0}.col-badge-t span{overflow-wrap:normal;line-height:1.3}
 .prose{margin:0;font-size:clamp(19px,1.8vw,22px);line-height:1.7;color:var(--muted)}
 .svc{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:0 40px}
 .svc li{display:flex;flex-direction:column;gap:2px;padding:16px 0;border-bottom:1px solid var(--line)}
@@ -110,37 +141,68 @@ h2{font-size:clamp(28px,3.2vw,44px)}
 .duo{gap:22px}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
-:root{--bg:#f5f3f6;--ink:#251d2e;--muted:#564c60;--line:#ddd6e2;--acc:#1e2a26;--accInk:#f5f4f0;--fd:'Instrument Serif',serif;--fb:'Albert Sans',system-ui,sans-serif;--hw:400;--ht:-.01em;--r-btn:0;--r-img:0;--r-in:0;--field:transparent}
-body{font-weight:300;line-height:1.7}
-b,strong,.doc b,.svc b,.box b{font-weight:500}
-h2{font-size:clamp(40px,5vw,72px);line-height:1}
-.in{max-width:1280px}
+:root{--bg:#f5f3f6;--ink:#251d2e;--muted:#564c60;--line:#ddd6e2;--acc:#1e2a26;--accInk:#f5f4f0;--acc2:#6b4a9a;--fd:'Instrument Serif',serif;--fb:'Albert Sans',system-ui,sans-serif;--hw:400;--ht:-.01em;--r-btn:0;--r-img:2px;--r-in:0;--field:transparent}
+body{font-weight:300;line-height:1.65}
+b,strong,.doc b,.svc b,.box b,.steps b{font-weight:500}
+h2{font-size:clamp(38px,4.4vw,62px);line-height:1}
+.in{max-width:1240px}
+.sec{padding:clamp(56px,6.5vw,100px) 0}
 .brand{font-family:var(--fd);font-weight:400;font-size:28px;letter-spacing:0}
 .btn{font-weight:500}
 .btn-call{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1px var(--ink)}
-.hero-in{display:flex;flex-wrap:wrap;gap:48px 6vw;align-items:flex-end;padding-top:clamp(32px,6vw,96px);padding-bottom:clamp(64px,8vw,128px)}
-.hero-text{flex:1.3 1 480px;display:flex;flex-direction:column;gap:36px}
-.hero-ed h1{font-size:clamp(54px,8.2vw,124px);line-height:.92}
-.hero-sub{display:flex;flex-wrap:wrap;gap:24px 44px;align-items:flex-end}
-.hero-sub .lead{flex:1 1 260px;max-width:36ch;font-size:18px}
-.hero-fig{flex:1 1 340px;margin:0;display:flex;flex-direction:column;gap:10px}
-.hero-fig img{width:100%;aspect-ratio:4/5;object-fit:cover;filter:saturate(.85)}
-.hero-fig figcaption,.gal figcaption{font-size:13px;color:var(--muted)}
-.sec{padding:clamp(72px,9vw,144px) 0}
-.duo{gap:32px 6vw}
-.prose{font-family:var(--fd);font-size:clamp(26px,2.6vw,36px);line-height:1.3;color:var(--ink)}
-.svc li,.plist li,.pr{border-color:var(--line)}
-.gal img{filter:saturate(.85);aspect-ratio:4/5}
-.gal figure:nth-child(2n){margin-top:clamp(0px,6vw,96px)}
-.quotes blockquote{font-size:clamp(24px,2.4vw,32px);line-height:1.25}
-.tone-band{background:#dcd3e6;--line:rgba(37,29,46,0.18)}
+.hero-in{display:flex;flex-wrap:wrap;gap:40px 5vw;align-items:center;padding-top:clamp(20px,3vw,48px);padding-bottom:clamp(56px,6vw,96px)}
+.hero-text{flex:1.15 1 460px;display:flex;flex-direction:column;gap:30px}
+.hero-ed h1{font-size:clamp(52px,7.2vw,112px);line-height:.94}
+.hero-sub{display:flex;flex-direction:column;gap:22px}
+.hero-sub .lead{max-width:44ch;font-size:18px}
+.hero-fig{flex:1 1 380px;margin:0 0 30px;min-width:0}
+.col-main{width:100%;aspect-ratio:4/5;object-fit:cover;filter:saturate(.9)}
+.col-s{position:absolute;object-fit:cover;border:8px solid #f5f3f6;filter:saturate(.9)}
+.col-s1{width:46%;aspect-ratio:1;left:-18%;bottom:-30px}
+.col-s2{width:34%;aspect-ratio:3/4;right:-6%;top:-22px}
+.col-badge{right:-10px;bottom:28%;border-radius:0;background:#2e2440;color:#f1f0ea;flex-direction:column;align-items:flex-start;gap:8px;box-shadow:none;max-width:220px}
+.col-badge b{font-size:26px}.col-badge span{color:rgba(241,240,234,0.75)}
+.col-badge .ic{color:#dcd3e6;margin-bottom:4px}
+.hero-fig figcaption{margin-top:10px;font-size:13px;color:var(--muted)}
+.has-col figcaption{margin-top:40px}
+.quote-big{font-size:clamp(32px,4vw,58px)}
+.tone-band{background:#dcd3e6 url("data:image/svg+xml,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2024%2024'%20fill%3D'none'%20stroke%3D'rgba(37%2C29%2C46%2C0.35)'%20stroke-width%3D'.35'%3E%3Cpath%20d%3D'M7.5%203.5c1.6%200%202.7.9%204.5.9s2.9-.9%204.5-.9c2.4%200%204%201.9%204%204.6%200%203-1.3%204.6-2%207.4-.6%202.6-.9%205-2.4%205-1.7%200-1.6-4.7-4.1-4.7S9.6%2020.5%207.9%2020.5c-1.5%200-1.8-2.4-2.4-5-.7-2.8-2-4.4-2-7.4%200-2.7%201.6-4.6%204-4.6z'%2F%3E%3Cpath%20d%3D'M9%207.5c.9.4%201.9.6%203%20.6'%20stroke-width%3D'.25'%2F%3E%3C%2Fsvg%3E") no-repeat left -60px center/clamp(260px,34vw,460px);--line:rgba(37,29,46,0.18)}
 .tone-band .note{color:rgba(37,29,46,0.8)}
+.tone-white{background:#fcfbfc}
 .tone-deep{background:#2e2440;color:#f1f0ea;--ink:#f1f0ea;--muted:rgba(241,240,234,0.72);--line:rgba(255,255,255,0.25);--acc:#f1f0ea;--accInk:#2e2440}
+.cards{grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:0;border-top:1px solid var(--line)}
+.card{padding:28px 28px 30px 0;border-bottom:1px solid var(--line);gap:12px}
+.card h3{font-family:var(--fd);font-size:28px;font-weight:400;line-height:1.05;letter-spacing:0}
+.card .ic{width:52px;height:52px;border-radius:50%;border:1px solid rgba(107,74,154,0.5);color:#6b4a9a}
+.card-img{border:0;padding:0 0 0 0!important;min-height:260px}
+.card-img img{filter:saturate(.9)}
+.facts{grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:0}
+.facts div{padding:6px 28px;border-left:1px solid var(--line)}
+.facts div:first-child{border-left:0;padding-left:0}
+.facts dt{font-size:clamp(44px,4.6vw,68px);font-weight:400}
+.facts .ic{color:#6b4a9a;margin-bottom:6px}
+.prose{font-family:var(--fd);font-size:clamp(26px,2.6vw,36px);line-height:1.3;color:var(--ink)}
+.duo-img{align-items:center}
+.duo-img .sp-img{flex:1 1 420px;width:100%;aspect-ratio:4/3;filter:saturate(.9)}
+.duo-img .duo-h,.duo-img .duo-b{flex:1 1 340px}
+.plist li{border-color:var(--line)}
+.gal{grid-template-columns:repeat(4,minmax(0,1fr));grid-auto-rows:clamp(150px,17vw,230px);gap:10px}
+.gal figure{position:relative}.gal a{height:100%}
+.gal img{height:100%;aspect-ratio:auto;filter:saturate(.9)}
+.gal figcaption{position:absolute;left:0;bottom:0;padding:6px 10px;background:#f5f3f6;font-size:12px}
+.gal-5 figure:first-child,.gal-4 figure:first-child{grid-column:span 2;grid-row:span 2}
+.gal-3 figure:first-child{grid-column:span 2;grid-row:span 2}
+.gal-2{grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:clamp(220px,28vw,380px)}
+.steps li{padding-top:18px;border-top:1px solid var(--line)}
+.steps .ic{color:#6b4a9a}
+.faq summary{font-family:var(--fd);font-weight:400;font-size:24px}
+.quotes blockquote{font-size:clamp(24px,2.4vw,32px);line-height:1.25}
 .book input,.book select{border:0;border-bottom:1px solid var(--line);padding:0;background:transparent}
 .book select option{color:#111}
 .phones a{font-size:30px}
 .map{filter:saturate(.7)}
 .dock{--dockBg:#f5f3f6}
+@media (max-width:820px){.col-s1{left:-4%}.col-s2{right:-3%}.col-badge{right:6px}.gal{grid-template-columns:repeat(2,minmax(0,1fr))}.facts div{border-left:0;padding-left:0}}
 </style>
 </head>
 <body class="t-skandi">
@@ -148,12 +210,16 @@ h2{font-size:clamp(40px,5vw,72px);line-height:1}
 <nav class="nav" aria-label="Glavni meni"><a href="#usluge">Usluge</a><a href="#kontakt">Kontakt</a></nav>
 <a class="btn btn-call" href="tel:+381643910040"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2"/></svg><span>064 391 0040</span></a></div></header>
 <section class="hero hero-ed" id="vrh"><div class="in hero-in">
-<div class="hero-text"><h1>Pregled i konsultacije su besplatni</h1><div class="hero-sub"><p class="lead">Ordinacija dr Ivane Kuprešanin Nimčević u samom centru Subotice, sa timom specijalista, stomatoloških sestara i zubnih tehničara.</p><a class="btn btn-main" href="tel:+381643910040"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2"/></svg><span>064 391 0040</span></a></div><a class="rating" href="https://www.google.com/maps/place/STOMATOLO%C5%A0KA+ORDINACIJA+KUPRE%C5%A0ANIN/data=!4m7!3m6!1s0x474366c8ab7a78c5:0xb60fe45d7e11ab4c!8m2!3d46.1011189!4d19.6629593!16s%2Fg%2F11b8v9vll4!19sChIJxXh6q8hmQ0cRTKsRfl3kD7Y?authuser=0&amp;hl=sr&amp;g_ep=EgoyMDI2MTAyMC4wIJJjKgBIAVAD&amp;rclk=1" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6L2.5 9.4l6.6-.8z"/></svg><b>4,9</b><span>164 ocena na Google-u</span></a></div>
-<figure class="hero-fig"><img class="" src="img/07.jpg" alt="Dr Ivana Kuprešanin Nimčević" decoding="async" fetchpriority="high"><figcaption>Dr Ivana Kuprešanin Nimčević</figcaption></figure>
+<div class="hero-text"><h1>Pregled i konsultacije su besplatni</h1><div class="hero-sub"><p class="lead">Ordinacija dr Ivane Kuprešanin Nimčević u samom centru Subotice. O vašim zubima brine sa timom specijalista, stomatoloških sestara i zubnih tehničara.</p><div class="ctas"><a class="btn btn-main" href="tel:+381643910040"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2"/></svg><span>064 391 0040</span></a><a class="btn btn-alt" href="#zakazivanje"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg><span>Zakažite pregled</span></a></div></div><a class="rating" href="https://www.google.com/maps/place/STOMATOLO%C5%A0KA+ORDINACIJA+KUPRE%C5%A0ANIN/data=!4m7!3m6!1s0x474366c8ab7a78c5:0xb60fe45d7e11ab4c!8m2!3d46.1011189!4d19.6629593!16s%2Fg%2F11b8v9vll4!19sChIJxXh6q8hmQ0cRTKsRfl3kD7Y?authuser=0&amp;hl=sr&amp;g_ep=EgoyMDI2MTAyMC4wIJJjKgBIAVAD&amp;rclk=1" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6L2.5 9.4l6.6-.8z"/></svg><b>4,9</b><span>164 ocena na Google-u</span></a></div>
+<figure class="hero-fig has-col"><img class="col-main" src="img/27.jpg" alt="Dr Ivana Kuprešanin Nimčević u ordinaciji" decoding="async" fetchpriority="high"><img class="col-s col-s1" src="img/17.jpg" alt="Ulica Dimitrija Tucovića" loading="lazy" decoding="async"><img class="col-s col-s2" src="img/20.jpg" alt="Ordinacija Kuprešanin" loading="lazy" decoding="async"><div class="col-badge"><span class="ic"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-7.5-4.6-7.5-10A4.3 4.3 0 0 1 12 7.4 4.3 4.3 0 0 1 19.5 10c0 5.4-7.5 10-7.5 10z"/></svg></span><div class="col-badge-t"><b>Besplatno</b><span>pregled i konsultacije</span></div></div><figcaption>Dr Ivana Kuprešanin Nimčević</figcaption></figure>
 </div></section>
-<main><section class="sec s-posebno tone-band" id="posebno-0"><div class="in"><div class="duo duo-img"><img class="sp-img" src="img/11.jpg" alt="Naučite da čuvate zube za ceo život" loading="lazy" decoding="async"><div class="duo-h"><h2>Naučite da čuvate zube za ceo život</h2><p class="note">Individualna obuka kod sertifikovanog ITOP stomatologa. Dobijate:</p></div><div class="duo-b"><ul class="plist"><li>Četkicu za zube Curaprox CS 5460</li><li>Dve interdentalne četkice Curaprox CPS prime</li><li>Obuku o pravilnom pranju zuba, koncu i interdentalnoj četkici</li><li>Uklanjanje kamenca</li></ul></div></div></div></section>
-<section class="sec s-usluge tone-plain" id="usluge"><div class="in"><div class="duo"><div class="duo-h"><h2>Šta radimo</h2></div><div class="duo-b"><ul class="svc"><li><b>Preventiva</b><span>Fluorizacija, zalivanje fisura, night guard za škrgutanje zubima</span></li><li><b>Bolesti zuba</b><span>Plombe od estetskih materijala, lečenje kanala</span></li><li><b>Estetska stomatologija</b><span>Boja, oblik i položaj zuba, kompozitne fasete</span></li><li><b>Oralna hirurgija</b><span>Uz lokalnu anesteziju</span></li><li><b>Protetika</b><span>Nadoknada izgubljenih zuba</span></li><li><b>Parodontologija</b><span>Lečenje upale desni</span></li></ul></div></div></div></section>
-<section class="sec s-galerija tone-plain" id="galerija"><div class="in"><div class="gal gal-2"><figure><a href="img/10.jpg" data-lb><img class="" src="img/10.jpg" alt="Ordinacija u centru Subotice" loading="lazy" decoding="async"></a><figcaption>Ordinacija u centru Subotice</figcaption></figure><figure><a href="img/09.jpg" data-lb><img class="" src="img/09.jpg" alt="Dr Kuprešanin Nimčević" loading="lazy" decoding="async"></a><figcaption>Dr Kuprešanin Nimčević</figcaption></figure></div></div></section>
+<main><section class="sec s-posebno tone-band" id="posebno-0"><div class="in"><div class="sp-split"><img class="sp-img" src="img/11.jpg" alt="Naučite da čuvate zube za ceo život" loading="lazy" decoding="async"><div class="sp-text"><h2>Naučite da čuvate zube za ceo život</h2><p class="note">Individualna obuka kod sertifikovanog ITOP stomatologa. Dobijate:</p><ul class="plist"><li><span class="ck"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 12.5l4.5 4.5L19.5 7"/></svg></span><span>Četkicu za zube Curaprox CS 5460</span></li><li><span class="ck"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 12.5l4.5 4.5L19.5 7"/></svg></span><span>Dve interdentalne četkice Curaprox CPS prime</span></li><li><span class="ck"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 12.5l4.5 4.5L19.5 7"/></svg></span><span>Obuku o pravilnoj četkici, koncu i interdentalnoj četkici</span></li><li><span class="ck"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 12.5l4.5 4.5L19.5 7"/></svg></span><span>Uklanjanje kamenca</span></li></ul></div></div></div></section>
+<section class="sec s-usluge tone-plain" id="usluge"><div class="in"><div class="sec-top"><h2>Šta radimo</h2></div>
+<div class="cards"><article class="card"><span class="ic"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20L14 10"/><rect x="13" y="3" width="5" height="9" rx="1.2" transform="rotate(45 15.5 7.5)"/><path d="M15 5.5l3 3M16.5 4l3 3"/></svg></span><h3>Preventiva</h3><p>Obuka o higijeni, uklanjanje naslaga, fluorizacija, zalivanje fisura i night guard za škrgutanje zubima.</p></article><article class="card"><span class="ic"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.5 3.5c1.6 0 2.7.9 4.5.9s2.9-.9 4.5-.9c2.4 0 4 1.9 4 4.6 0 3-1.3 4.6-2 7.4-.6 2.6-.9 5-2.4 5-1.7 0-1.6-4.7-4.1-4.7S9.6 20.5 7.9 20.5c-1.5 0-1.8-2.4-2.4-5-.7-2.8-2-4.4-2-7.4 0-2.7 1.6-4.6 4-4.6z"/></svg></span><h3>Bele plombe</h3><p>Kompozitni ispuni za prednje i bočne zube. Kontrola na 3 do 6 meseci hvata karijes na početku, kada je popravka gotovo bezbolna.</p></article><article class="card"><span class="ic"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.5 3.5c1.6 0 2.7.9 4.5.9s2.9-.9 4.5-.9c2.4 0 4 1.9 4 4.6 0 3-1.3 4.6-2 7.4-.6 2.6-.9 5-2.4 5-1.7 0-1.6-4.7-4.1-4.7S9.6 20.5 7.9 20.5c-1.5 0-1.8-2.4-2.4-5-.7-2.8-2-4.4-2-7.4 0-2.7 1.6-4.6 4-4.6z"/><path d="M10 9.5l.8 6M14 9.5l-.8 6"/></svg></span><h3>Lečenje kanala</h3><p>Kada nelečeni karijes zahvati pulpu (živac), zub se leči kroz kanal korena.</p></article><article class="card"><span class="ic"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9l3-4 2.5 3L12 4l2.5 4L17 5l3 4"/><path d="M5 9.5h14"/><path d="M5.5 9.5c0 4 1 6.5 1.6 9.5h9.8c.6-3 1.6-5.5 1.6-9.5"/></svg></span><h3>Bezmetalne krunice</h3><p>Potpuno od keramike, toliko da se ne može napraviti razlika između zuba i krunice, uz manje brušenja.</p></article><article class="card"><span class="ic"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8.5C5 13 8.3 15 12 15s7-2 9-6.5"/><path d="M5 10.5v2.5M8 12.6v2.6M12 13.4v2.8M16 12.6v2.6M19 10.5v2.5"/><path d="M3 8.5c3 4.5 15 4.5 18 0"/></svg></span><h3>Mostovi i proteze</h3><p>Metalo-keramički i cirkonijum mostovi, akrilatne i skeletirane proteze sa i bez atečmena.</p></article><article class="card"><span class="ic"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8c2.5 2 5.5 3 9 3s6.5-1 9-3"/><path d="M5.5 10c0 3 .7 5.5 1.5 8M10 11v8M14 11v8M18.5 10c0 3-.7 5.5-1.5 8"/></svg></span><h3>Parodontologija</h3><p>Ultrazvučno uklanjanje kamenca je bezbolno. Kiretiranje i medikacija parodontalnih džepova.</p></article><article class="card"><span class="ic"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.5 3.5l6 6-9.5 9.5-6 1.5 1.5-6z"/><path d="M12.5 5.5l6 6"/></svg></span><h3>Oralna hirurgija</h3><p>Sve hirurške intervencije u usnoj duplji, uz lokalnu anesteziju.</p></article><article class="card"><span class="ic"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5c3 2 6 3 9 3s6-1 9-3"/><rect x="5" y="9.2" width="3" height="3" rx=".6"/><rect x="10.5" y="11" width="3" height="3" rx=".6"/><rect x="16" y="9.2" width="3" height="3" rx=".6"/></svg></span><h3>Ortodoncija i deca</h3><p>Mobilne i fiksne proteze za položaj zuba; popravka i vađenje mlečnih zuba.</p></article><figure class="card card-img"><img class="" src="img/25.jpg" alt="Stomatološka ordinacija Kuprešanin" loading="lazy" decoding="async"></figure></div></div></section>
+<section class="sec s-brojke tone-white" id="brojke"><div class="in"><dl class="facts"><div><span class="ic"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-7.5-4.6-7.5-10A4.3 4.3 0 0 1 12 7.4 4.3 4.3 0 0 1 19.5 10c0 5.4-7.5 10-7.5 10z"/></svg></span><dt>0 din</dt><dd>pregled i konsultacije</dd></div><div><span class="ic"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg></span><dt>3–6 meseci</dt><dd>preporučene kontrole</dd></div><div><span class="ic"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20L14 10"/><rect x="13" y="3" width="5" height="9" rx="1.2" transform="rotate(45 15.5 7.5)"/><path d="M15 5.5l3 3M16.5 4l3 3"/></svg></span><dt>ITOP</dt><dd>sertifikovana obuka o higijeni</dd></div><div><span class="ic"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.5 3.5c1.6 0 2.7.9 4.5.9s2.9-.9 4.5-.9c2.4 0 4 1.9 4 4.6 0 3-1.3 4.6-2 7.4-.6 2.6-.9 5-2.4 5-1.7 0-1.6-4.7-4.1-4.7S9.6 20.5 7.9 20.5c-1.5 0-1.8-2.4-2.4-5-.7-2.8-2-4.4-2-7.4 0-2.7 1.6-4.6 4-4.6z"/></svg></span><dt>Centar</dt><dd>Subotice, Dimitrija Tucovića 6</dd></div></dl></div></section>
+<section class="sec s-galerija tone-plain" id="galerija"><div class="in"><div class="gal gal-5"><figure><a href="img/10.jpg" data-lb><img class="" src="img/10.jpg" alt="Ordinacija" loading="lazy" decoding="async"></a><figcaption>Ordinacija</figcaption></figure><figure><a href="img/19.jpg" data-lb><img class="" src="img/19.jpg" alt="Ulaz" loading="lazy" decoding="async"></a><figcaption>Ulaz</figcaption></figure><figure><a href="img/24.jpg" data-lb><img class="" src="img/24.jpg" alt="Ordinacija" loading="lazy" decoding="async"></a><figcaption>Ordinacija</figcaption></figure><figure><a href="img/26.jpg" data-lb><img class="" src="img/26.jpg" alt="Dr Kuprešanin Nimčević" loading="lazy" decoding="async"></a><figcaption>Dr Kuprešanin Nimčević</figcaption></figure><figure><a href="img/22.jpg" data-lb><img class="" src="img/22.jpg" alt="Ordinacija" loading="lazy" decoding="async"></a><figcaption>Ordinacija</figcaption></figure></div></div></section>
+<section class="sec s-pitanja tone-plain" id="pitanja"><div class="in"><div class="duo"><div class="duo-h"><h2>Pitanja pacijenata</h2></div>
+<div class="duo-b faq"><details open><summary>Zašto je kamenac opasan?</summary><p>Pored estetskog problema, kamenac je glavni uzročnik parodontopatije: upale i krvarenja desni, klaćenja i na kraju ispadanja zuba.</p></details><details><summary>Da li boli skidanje kamenca?</summary><p>Ultrazvučno uklanjanje kamenca je bezbolno, jer se naslage uklanjaju vibracijama aparata.</p></details><details><summary>Metalo-keramika ili bezmetalna krunica?</summary><p>Metalo-keramičke krune su otporne i dugotrajne. Bezmetalne su potpuno od keramike, traže manje brušenja zuba, a estetika je na znatno većem nivou.</p></details><details><summary>Kada se radi proteza umesto mosta?</summary><p>Kada je izvađeno mnogo zuba, kada je razmak između preostalih zuba velik ili su preostali zubi u lošem stanju.</p></details></div></div></div></section>
 <section class="sec s-zakazivanje tone-deep" id="zakazivanje"><div class="in"><div class="duo"><div class="duo-h"><h2>Zakažite pregled</h2><p class="note">Ostavite ime i broj, a mi vas zovemo da dogovorimo termin.</p></div>
 <form class="duo-b book" data-mail="ikupresanin@gmail.com" data-name="Stomatološka ordinacija Kuprešanin">
 <label>Ime i prezime<input name="ime" autocomplete="name" required></label>
@@ -165,7 +231,7 @@ h2{font-size:clamp(40px,5vw,72px);line-height:1}
 <section class="sec s-kontakt tone-plain" id="kontakt"><div class="in"><div class="contact"><div class="contact-text">
 <h2>Dimitrija Tucovića 6</h2>
 <p class="addr"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span>Dimitrija Tucovića 6, Subotica</span></p>
-<dl class="hours"><div><dt>Pon, sre, pet</dt><dd>8–15 h</dd></div><div><dt>Uto, čet</dt><dd>12–20 h</dd></div><div><dt>Vikend</dt><dd>ne radimo</dd></div></dl>
+<dl class="hours"><div><dt>Pon, sre, pet</dt><dd>8–15 h</dd></div><div><dt>Uto, čet</dt><dd>13–20 h</dd></div><div><dt>Vikend</dt><dd>ne radimo</dd></div></dl>
 <div class="phones"><a href="tel:+381643910040">064 391 0040</a></div>
 <a class="mail" href="mailto:ikupresanin@gmail.com">ikupresanin@gmail.com</a>
 </div><div class="map"><iframe src="https://maps.google.com/maps?q=Stomatolo%C5%A1ka%20ordinacija%20Kupre%C5%A1anin%2C%20Dimitrija%20Tucovi%C4%87a%206%2C%20Subotica&z=16&output=embed" loading="lazy" title="Mapa: Stomatološka ordinacija Kuprešanin" referrerpolicy="no-referrer-when-downgrade"></iframe></div></div></div></section></main>
