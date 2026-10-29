@@ -2,3 +2,7 @@
 _slike/smestaj/
 _slike/stock-smestaj/
 _podaci/smestaj-izvor/
+
+# Raw crawl output for stomatolozi (regenerate with _alati/skupi.js stomatolozi)
+_slike/stomatolozi/
+_podaci/stomatolozi-izvor/

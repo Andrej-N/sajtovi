@@ -34,4 +34,5 @@ jednog defaulta (onda dođe sledeći default), nego da se **svaka odluka izvede 
 7. Animacija samo gde nešto znači (hover na dugmetu, otvaranje galerije). Poštovati prefers-reduced-motion.
 8. Pre objave proći ovu listu kao checklistu.
 9. Četiri šablona ne smeju svi biti svetli i pastelni. Variraj kontrast: jedan tamni, jedan sa jakim zasićenim bojama, jedan koji smenjuje tamne i svetle sekcije, jedan svetli ili pastelni (korisnik je to tražio za smeštaj, 29.10.2026).
+9a. Stomatolozi (29.10.2026): korisnik želi **svetle** varijante svih stilova (ne tamne pozadine) i više minimalizma: manje sekcija, kartica, senki i čipova, više praznog prostora, akcenat samo na glavnom dugmetu. Ali ne sve belo: svetla osnova + 1–2 obojene sekcije ili pločice za kontrast (tamna ili zasićena traka, pastelni blok).
 10. Uz svaki desktop dizajn odmah napravi i prikaz za telefon (390 px). Veličine fontova preko clamp() i cqi, rasporedi preko flex-wrap i auto-fit, bez tabela koje se skroluju bočno.
