@@ -12,7 +12,7 @@ const SRC = path.join(ROOT, '..', 'email-leadovi-po-delatnosti.json');
 const OUT = path.join(ROOT, '_podaci', niche + '-izvor');
 const IMG = path.join(ROOT, '_slike', niche);
 const UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130 Safari/537.36';
-const PAGE_HINT = /apartman|smestaj|smeštaj|sob[ae]|room|cen|price|kontakt|contact|o-nama|onama|about|galerij|gallery|foto|lokacij|location|usluge|ponud|vila|studio|spa|wellness|restoran|ponuda/i;
+const PAGE_HINT = /apartman|smestaj|smeštaj|sob[ae]|room|cen|price|kontakt|contact|o-nama|onama|about|galerij|gallery|foto|lokacij|location|usluge|ponud|vila|studio|spa|wellness|restoran|ponuda|nekretnin|stan|kuc|kuć|plac|lokal|prodaj|izdavanj|oglas|property/i;
 const IMG_SKIP = /logo|icon|ikon|flag|zastav|sprite|facebook|instagram|twitter|youtube|booking|tripadvisor|airbnb|visa|master|paypal|banner-ad|pixel|blank|spacer|loader|arrow|strelic|btn|button|captcha|thumb_|-150x150|-100x100|wp-emoji/i;
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));

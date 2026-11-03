@@ -6,3 +6,9 @@ _podaci/smestaj-izvor/
 # Raw crawl output for stomatolozi (regenerate with _alati/skupi.js stomatolozi)
 _slike/stomatolozi/
 _podaci/stomatolozi-izvor/
+
+# Raw crawl output for nekretnine (regenerate with _alati/skupi.js, _alati/oglasi.js, _alati/commons.js nekretnine)
+_slike/nekretnine/
+_slike/stock-nekretnine/
+_podaci/nekretnine-izvor/
+_podaci/nekretnine-oglasi/

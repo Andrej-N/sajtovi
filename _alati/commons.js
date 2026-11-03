@@ -6,7 +6,7 @@ const path = require('path');
 const sharp = require('sharp');
 
 const niche = process.argv[2] || 'smestaj';
-const UA = 'lead-prospecting-demo/1.0 (andrej.nedeljkovic5@gmail.com)';
+const UA = 'sajtovi-demo/1.0 (https://andrej-n.github.io/sajtovi/)';
 const MESTA = {
   smestaj: {
     zlatibor: ['Zlatibor', 'Zlatibor Lake', 'Ribnica Lake (Zlatibor)'],
@@ -15,6 +15,10 @@ const MESTA = {
     vrnjacka: ['Vrnjačka Banja', 'Vrnjacka Banja', 'Vrnjačka Banja Spa'],
     sokobanja: ['Sokobanja', 'Nature of Sokobanja', 'Panoramas of Sokobanja', 'Streets in Sokobanja'],
     beograd: ['Slavija (Belgrade)', 'Vračar', 'Saint Sava Temple'],
+  },
+  nekretnine: {
+    cacak: ['Čačak', 'Streets in Čačak', 'Buildings in Čačak'],
+    kraljevo: ['Kraljevo', 'Streets in Kraljevo', 'Buildings in Kraljevo'],
   },
 }[niche];
 const OK_LIC = /^(cc0|public domain|pd|cc by(-sa)? [1-4]\.0)/i;
