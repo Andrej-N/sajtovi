@@ -12,3 +12,7 @@ _slike/nekretnine/
 _slike/stock-nekretnine/
 _podaci/nekretnine-izvor/
 _podaci/nekretnine-oglasi/
+
+# Raw crawl output for klima (regenerate with _alati/skupi.js klima-bela-tehnika)
+_slike/klima-bela-tehnika/
+_podaci/klima-bela-tehnika-izvor/

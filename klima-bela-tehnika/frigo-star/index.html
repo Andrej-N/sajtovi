@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="sr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Frigo Star: servis rashladnih i klima uređaja</title>
+<meta name="description" content="Ugradnja, servis i održavanje rashladnih i klima uređaja. Radimo u svim beogradskim opštinama i ostalim gradovima Srbije.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,300;6..72,400;6..72,500&family=Hanken+Grotesk:wght@400;500;600&display=swap">
+<style>
+body{padding-bottom:96px}
+.dz{position:fixed;left:0;right:0;bottom:max(14px,env(safe-area-inset-bottom));z-index:9999;display:flex;flex-direction:column;align-items:center;gap:10px;pointer-events:none;font:500 15px/1.3 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;letter-spacing:0;text-transform:none}
+.dz *{box-sizing:border-box}
+.dz-bar,.dz-tip{pointer-events:auto}
+.dz-tip{margin:0;max-width:min(440px,calc(100vw - 24px));background:#fff;color:#16181d;padding:12px 44px 12px 16px;border-radius:14px;box-shadow:0 8px 28px rgba(0,0,0,.22);position:relative;font-size:15px;line-height:1.45}
+.dz-tip button{position:absolute;top:6px;right:6px;width:32px;height:32px;border:0;background:none;color:#16181d;font-size:15px;cursor:pointer;border-radius:8px}
+.dz-bar{display:flex;align-items:center;gap:6px;background:#16181d;color:#fff;padding:6px;border-radius:999px;box-shadow:0 10px 30px rgba(0,0,0,.35);max-width:calc(100vw - 16px)}
+.dz a{color:#fff;text-decoration:none}
+.dz-arr{display:flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:50%;font-size:24px;line-height:1}
+.dz-arr:hover,.dz-dot:hover{background:rgba(255,255,255,.12)}
+.dz-dots{display:flex;gap:2px}
+.dz-dot{display:flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:50%;font-size:14px;color:#c9ccd3!important}
+.dz-dot[aria-current]{background:#fff;color:#16181d!important;font-weight:700}
+.dz-name{display:flex;flex-direction:column;padding:0 10px 0 6px;font-size:13px;line-height:1.25;white-space:nowrap}
+.dz-name span{color:#aeb3bd}
+.dz-next{display:flex;align-items:center;gap:8px;min-height:44px;padding:0 18px;border-radius:999px;background:#ffd23f;color:#16181d!important;font-weight:700;white-space:nowrap}
+.dz-next:hover{background:#ffe077}
+.dz-pick{display:flex;align-items:center;min-height:44px;padding:0 16px;border-radius:999px;border:1px solid rgba(255,255,255,.35);white-space:nowrap}
+.dz-pick:hover{background:rgba(255,255,255,.12)}
+@media (max-width:760px){.dz-name,.dz-pick{display:none}.dz-dots{display:none}.dz-bar{gap:4px}.dz-next{padding:0 14px}}
+@media (max-width:360px){.dz-arr{display:none}}
+
+:root{--g:#0E1C20;--b:#1A3E46;--a:#E0A679;--l:#2B4146;--bl:#3A5C63;--i:#EFE9DD;--m:#C9D0CB;--ink:#14201F;--rub:clamp(20px,4.4vw,64px);--sf:Newsreader,Georgia,'Times New Roman',serif}
+*{box-sizing:border-box}html{background:var(--g);color-scheme:dark;scroll-behavior:smooth}
+body{margin:0;background:var(--g);color:var(--i);font:400 17px/1.6 'Hanken Grotesk','Helvetica Neue',Arial,sans-serif;-webkit-font-smoothing:antialiased}
+h1,h2,h3,p,figure,ol{margin:0}a{color:inherit}a:focus-visible{outline:2px solid var(--a);outline-offset:3px}img{display:block;max-width:100%}
+.top{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px 40px;padding:24px var(--rub)}
+.ime{font:500 30px/1.1 var(--sf);text-decoration:none}
+.top nav{display:flex;flex-wrap:wrap;align-items:center;gap:6px 32px;font-size:15px}.top nav a{text-decoration:none}.top .br{color:var(--a);font-weight:500;font-variant-numeric:tabular-nums}
+.hero{display:flex;flex-wrap:wrap;align-items:stretch}
+.hl{flex:1 1 min(520px,100%);min-width:0;display:flex;flex-direction:column;justify-content:space-between;gap:52px;padding:clamp(28px,6vw,88px) var(--rub) clamp(32px,4.4vw,64px)}
+h1{font:300 clamp(44px,6.2vw,94px)/1.01 var(--sf);letter-spacing:-.022em;text-wrap:balance}
+.hb{display:flex;flex-direction:column;gap:26px;max-width:30em}.hb p{color:var(--m)}
+.btn{align-self:flex-start;display:inline-flex;align-items:center;min-height:52px;padding:0 28px;background:var(--a);color:var(--ink);font-weight:600;text-decoration:none;transition:background .18s}.btn:hover{background:#ecbb95}
+.hr{flex:1.25 1 min(620px,100%);min-width:0;position:relative;min-height:clamp(360px,52vw,760px);background:var(--b);overflow:hidden}
+.hr img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.traka{display:flex;flex-wrap:wrap;gap:12px clamp(40px,7vw,110px);padding:24px var(--rub);border-bottom:1px solid var(--l);font-size:15px;color:var(--m)}
+.usl{padding:clamp(64px,9vw,136px) var(--rub) clamp(48px,6vw,88px);display:flex;flex-wrap:wrap;gap:36px clamp(40px,6vw,96px)}
+h2{font:300 clamp(34px,3.8vw,56px)/1.06 var(--sf);letter-spacing:-.015em;text-wrap:balance}
+.usl h2{flex:1 1 min(300px,100%)}.ul{flex:3 1 min(620px,100%);min-width:0;display:flex;flex-direction:column}
+.ur{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:4px 40px;padding:22px 0;border-top:1px solid var(--l)}.ur:last-child{border-bottom:1px solid var(--l)}
+.ur h3{font:400 clamp(23px,2.2vw,31px)/1.18 var(--sf)}.ur span{color:var(--m)}
+.dip{display:flex;flex-wrap:wrap;align-items:flex-end;gap:clamp(20px,2.4vw,36px);padding:0 var(--rub) clamp(72px,9vw,136px)}
+.dip figure{min-width:0;display:flex;flex-direction:column;gap:14px;flex:1 1 min(320px,100%)}.dip figure:first-child{flex:1.7 1 min(520px,100%)}
+.dip img{width:100%;aspect-ratio:5/3;object-fit:cover}.dip figure:not(:first-child) img{aspect-ratio:4/5}.dip figcaption{font-size:15px;color:var(--m)}
+.sv{background:var(--b);display:flex;flex-wrap:wrap;align-items:stretch}
+.svi{flex:1 1 min(480px,100%);min-width:0;position:relative;min-height:clamp(300px,42vw,640px);overflow:hidden}.svi img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.svt{flex:1.15 1 min(520px,100%);min-width:0;padding:clamp(48px,6.4vw,96px) var(--rub);display:flex;flex-direction:column;gap:30px}
+.svt ol{padding:0;list-style:none;display:flex;flex-direction:column}.svt li{display:flex;gap:20px;padding:13px 0;border-top:1px solid var(--bl)}.svt li:last-child{border-bottom:1px solid var(--bl)}
+.svt li b{font-weight:400;color:var(--a);font-variant-numeric:tabular-nums}.svt>p{color:#D5DCD7;max-width:34em}
+.tri{padding:clamp(72px,9vw,136px) var(--rub);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr));gap:44px clamp(32px,5vw,80px)}
+.tri div{display:flex;flex-direction:column;gap:10px}.tri strong{font:300 clamp(36px,3.6vw,52px)/1.08 var(--sf)}.tri div:first-child strong{font-size:clamp(58px,7vw,104px);line-height:1;color:var(--a)}.tri span{color:var(--m);max-width:22em}
+.cen{padding:0 var(--rub) clamp(72px,9vw,136px);display:flex;flex-direction:column;gap:30px}
+.cgs{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(340px,100%),1fr));gap:30px clamp(32px,5vw,80px)}
+.cg h3{font:400 clamp(23px,2.2vw,31px)/1.18 var(--sf);padding-bottom:12px}.red{display:flex;justify-content:space-between;align-items:baseline;gap:20px;padding:11px 0;border-top:1px solid var(--l)}
+.red strong{font-weight:500;white-space:nowrap;font-variant-numeric:tabular-nums;color:var(--a)}.red small{display:block;font-size:14px;color:var(--m)}.cen>p{color:var(--m);max-width:44em;font-size:15px}
+.mar{padding:0 var(--rub) clamp(72px,9vw,136px)}.mar p{border-top:1px solid var(--l);padding-top:38px;font:300 clamp(27px,3.2vw,46px)/1.22 var(--sf);max-width:25em;text-wrap:pretty}
+.kon{background:var(--i);color:var(--ink);padding:clamp(64px,8vw,120px) var(--rub) clamp(40px,4vw,60px);display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:44px}
+.kl{flex:2 1 min(560px,100%);min-width:0;display:flex;flex-direction:column;gap:16px}.kb{font:300 clamp(44px,8.4vw,128px)/1 var(--sf);letter-spacing:-.015em;text-decoration:none;white-space:nowrap;font-variant-numeric:lining-nums}
+address{flex:1 1 min(260px,100%);font-style:normal;display:flex;flex-direction:column;gap:3px}.pred{flex-basis:100%;font-size:14px;color:#47524F;margin-top:8px}
+body{padding-bottom:0}.kon{padding-bottom:clamp(110px,10vw,130px)}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+
+</head>
+<body>
+
+<header class="top"><a class="ime" href="#vrh">Frigo Star</a><nav aria-label="Glavni meni">
+<a href="#usluge">Usluge</a><a href="#postupak">Godišnji servis</a><a href="#kontakt">Kontakt</a>
+<a class="br" href="tel:+381643161299">064 316 1299</a></nav></header>
+<main id="vrh">
+<section class="hero"><div class="hl"><h1>Hladnoća je naš zanat od 5. februara 2007.</h1><div class="hb"><p>Ugradnja, servis i održavanje rashladnih i klima uređaja. Radimo u svim beogradskim opštinama i ostalim gradovima Srbije.</p><a class="btn" href="tel:+381643161299">Pozovite 064 316 1299</a></div></div>
+<div class="hr"><img src="img/c-hero.jpg" alt="Frigomehaničar Frigo Stara proverava zid detektorom" style="object-position:60% 50%"></div></section>
+<section class="traka"><span>Ovlašćeni servis za Midea, Korel i AUX</span><span>Veliki lager rezervnih delova</span><span>Garancija na sve vrste usluga</span></section>
+<section class="usl" id="usluge"><h2>Od stana do hladnjače</h2><div class="ul"><div class="ur"><h3>Split, kanalske i centralne klime</h3><span>Servis, montaža, popravka</span></div><div class="ur"><h3>Vazdušne zavese i ventilacija</h3><span>Servis, montaža, popravka</span></div><div class="ur"><h3>Frižideri i zamrzivači</h3><span>Servis i popravka</span></div><div class="ur"><h3>Hladnjače, vitrine i ledomati</h3><span>Profesionalna ugostiteljska oprema</span></div><div class="ur"><h3>Višekompresorski agregati</h3><span>Sopstvena proizvodnja</span></div></div></section>
+<section class="dip"><figure><img src="img/c-kompresor.jpg" alt="Rashladni agregat" loading="lazy"><figcaption>Rashladni agregat</figcaption></figure><figure><img src="img/c-komora.jpg" alt="Isparivači i paneli za rashladne komore" loading="lazy"><figcaption>Isparivači i paneli za rashladne komore</figcaption></figure></section>
+<section class="sv" id="postupak"><div class="svi"><img src="img/c-krov.jpg" alt="Pranje spoljne jedinice na krovu pod pritiskom" loading="lazy" style="object-position:70% 50%"></div><div class="svt"><h2>Šta tačno radimo na godišnjem servisu klime</h2><ol><li><b>1</b><span>Demontaža i pranje maske</span></li><li><b>2</b><span>Čišćenje turbine</span></li><li><b>3</b><span>Čišćenje otkapne tacne i odvodnog creva</span></li><li><b>4</b><span>Dezinfekcija i pranje izmenjivača toplote i filtera za vazduh</span></li><li><b>5</b><span>Pranje spoljne jedinice pod vazdušnim i vodenim pritiskom</span></li><li><b>6</b><span>Provera elektro i gasne instalacije, uključujući freon</span></li><li><b>7</b><span>Kontrola rada uređaja</span></li></ol><p>Za dezinfekciju koristimo sertifikovana sredstva. Servis preporučujemo jednom godišnje, jer se na filterima i isparivaču zadržavaju prljavština i bakterije.</p></div></section>
+<section class="tri"><div><strong>1 metar</strong><span>Toliko debele zidove možemo da probijemo za prolaz instalacije.</span></div><div><strong>Detektor za drvo, metal i kablove</strong><span>Pre bušenja proveravamo šta je u zidu.</span></div><div><strong>Detekcija curenja freona</strong><span>Mesto curenja svih vrsta rashladnog fluida nalazimo detektorom.</span></div></section>
+
+<section class="mar"><p>Servisiramo i montiramo uređaje svih proizvođača: LG, Midea, Samsung, Panasonic, Galanz, Kopernikus, Housel, Gorenje, Bosch, Electrolux, Zanussi, Beko.</p></section>
+
+</main>
+<footer class="kon" id="kontakt"><div class="kl"><span>Uvek dostupni našim klijentima</span><a class="kb" href="tel:+381643161299">064 316 1299</a></div>
+<address><span>Sadika Ramiza 20, Novi Beograd</span><a href="tel:+381112124038">011 212 4038</a><a href="tel:+381628532742">062 853 2742</a><a href="mailto:office@frigostar.info">office@frigostar.info</a></address>
+<p class="pred">Predlog novog sajta za Frigo Star. Podaci su preuzeti sa vašeg postojećeg sajta i Google mape.</p></footer>
+<link rel="prefetch" href="dizajn-2.html">
+<nav class="dz" aria-label="Predlozi dizajna">
+<p class="dz-tip" id="dz-tip">Napravili smo vam <b>3 različita dizajna</b>. Pogledajte ovaj, pa pređite na sledeći.<button type="button" aria-label="Zatvorite" data-tip-x>✕</button></p>
+<div class="dz-bar">
+<a class="dz-arr" href="dizajn-3.html" aria-label="Prethodni dizajn: Negative space">‹</a>
+<div class="dz-dots" role="list"><a role="listitem" href="index.html" class="dz-dot" aria-current="page" title="Premium">1</a><a role="listitem" href="dizajn-2.html" class="dz-dot"  title="3D stakleni">2</a><a role="listitem" href="dizajn-3.html" class="dz-dot"  title="Negative space">3</a></div>
+<span class="dz-name"><b>Dizajn 1 od 3</b><span>Premium</span></span>
+<a class="dz-next" href="dizajn-2.html">Pogledajte drugi dizajn <span aria-hidden="true">→</span></a>
+<a class="dz-pick" href="mailto:cherrystone.contact@gmail.com?subject=Frigo%20Star%3A%20biramo%20dizajn%201%20(Premium)&body=Zdravo%2C%0A%0Aza%20Frigo%20Star%20nam%20se%20najvi%C5%A1e%20svi%C4%91a%20dizajn%201%20(Premium).%0A%0A">Ovaj mi se sviđa</a>
+</div>
+</nav>
+<script>(function(){var t=document.getElementById('dz-tip');if(!t)return;try{if(sessionStorage.dzTip){t.remove();return}}catch(_){}
+t.querySelector('[data-tip-x]').addEventListener('click',function(){t.remove();try{sessionStorage.dzTip=1}catch(_){}})})();</script>
+</body>
+</html>
