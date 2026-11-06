@@ -57,7 +57,7 @@ async function excelRows() {
       proc: raw.proc && { ...raw.proc, img: need(raw.proc.img) },
       neg: { ...raw.neg, img: need(raw.neg.img || raw.heroImg), second: raw.neg.second && { ...raw.neg.second, img: need(raw.neg.second.img) } },
       phones: raw.phones || [row.phone],
-      email: raw.email || row.email || '',
+      email: raw.email === null ? '' : raw.email || row.email || '',
       rating: row.rating ? { value: row.rating, count: row.reviews, url: row.maps } : null,
     };
     const dir = path.join(out, raw.slug);

@@ -113,7 +113,7 @@ module.exports = [
     proc: { nav: 'Master ključ', t: 'Kako radi master generalni ključ', img: '01', alt: 'Stara brava sa mesinganom ključaonicom', items: ['Ne nosite gomilu ključeva, nego samo jedan', 'Sami birate oblasti kojima zaposleni mogu da pristupe', 'Sistem ključa sa prioritetom zaključavanja i otključavanja'] },
     facts: [{ k: '2', t: 'radnje na Bulevaru kralja Aleksandra: na broju 144 i na broju 358.' }, { k: 'Sve na jednom mestu', t: 'Od običnih i auto ključeva do brava i kasa.' }, { k: 'Stručan savet', t: 'Pomažemo da izaberete visokosigurnosne brave i prateću opremu.' }],
     ctaLine: 'Dve radnje, ista usluga', stepCta: 'Pozovite radnju',
-    phones: ['+381112452725', '+381113245355', '+381646414365', '+381646414366'], address: 'Bulevar kralja Aleksandra 144 i 358, Beograd', email: 'evlada@gmail.com',
+    phones: ['+381112452725', '+381113245355', '+381646414365', '+381646414366'], address: 'Bulevar kralja Aleksandra 144 i 358, Beograd', email: null, // evlada@gmail.com iz imenika ne postoji (mail se vratio 6.11.2026)
     d3: D3.ljub, premium: PR.noc,
     nums: [{ v: '2', t: 'radnje na Bulevaru kralja Aleksandra' }, { v: 'CNC', t: 'mašine za ključeve visokih zahteva' }],
     steps: cil({ kraj: 'Sve to radimo u dve radnje: popravku, promenu šifre, izradu ključa po bravi.' }),
