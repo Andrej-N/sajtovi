@@ -4,7 +4,8 @@ const http = require('http'), fs = require('fs'), path = require('path');
 const { chromium } = require('playwright');
 const [out, w, h, list, pre = 'k'] = process.argv.slice(2);
 const three = path.join(path.dirname(require.resolve('three')), '..');
-const scena = path.join(__dirname, '..', '..', '_sabloni', 'stolarija', 'scena.js');
+// SCENA_JS bira drugu scenu (npr. _sabloni/kuhinja/scena.js); podrazumevana je stolarija.
+const scena = process.env.SCENA_JS ? path.resolve(process.env.SCENA_JS) : path.join(__dirname, '..', '..', '_sabloni', 'stolarija', 'scena.js');
 const CFG = process.env.SCENA || JSON.stringify({ bg: {} });
 const page = `<!doctype html><meta charset=utf-8><style>html,body{margin:0;background:#000}canvas{display:block;width:100vw;height:100vh}#sklapanje{height:100px}</style>
 <script>window.SCENA=${CFG}</script>

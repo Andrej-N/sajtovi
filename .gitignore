@@ -20,3 +20,7 @@ _podaci/klima-bela-tehnika-izvor/
 # Raw crawl output for stolarija (regenerate with _alati/skupi.js stolarija)
 _slike/stolarija/
 _podaci/stolarija-izvor/
+
+# Raw crawl output for bravari (regenerate with _alati/skupi.js bravari)
+_slike/bravari/
+_podaci/bravari-izvor/
